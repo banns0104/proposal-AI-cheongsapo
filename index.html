@@ -270,6 +270,7 @@
     padding: 16px 18px 16px;
     border: 1px solid #EEEEEE;
     display: flex; flex-direction: column; gap: 10px;
+    min-height: 230px;
   }
   .lc-head {
     display: flex; align-items: center; gap: 8px;
@@ -644,6 +645,268 @@
     margin-top: 5px;
   }
   .p0-cta-sub b { color: #1AAD4B; font-weight: 800; }
+
+  /* AF-Agent · 4 engines mini pills */
+  .p0-engines {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    padding: 0; margin-left: 33px;
+    overflow: visible;
+  }
+  .p0-engine {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 4px 7px; border-radius: 100px;
+    background: #F5F2FE; border: 1px solid #E7DEFB;
+    font-size: 9px; font-weight: 800; color: #6433DF;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+    line-height: 1;
+    height: 19px;
+  }
+  .p0-engine .dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: linear-gradient(135deg, #0041FF, #6433DF);
+  }
+
+  /* AF-Agent · 지인 신뢰 시그널 카드 */
+  .p0-trust {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FBF9FF 100%);
+    border: 1px solid #E7DEFB; border-radius: 14px;
+    overflow: hidden; max-width: 296px;
+  }
+  .p0-trust-head {
+    padding: 9px 12px;
+    background: linear-gradient(135deg, #EEEBFF 0%, #F5F2FE 100%);
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid #EBE5FB;
+  }
+  .p0-trust-tg {
+    font-size: 9.5px; font-weight: 800; color: #6433DF; letter-spacing: -0.2px;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .p0-trust-cnt { font-size: 9.5px; color: #767676; font-weight: 600; }
+  .p0-trust-cnt b { color: #6433DF; font-weight: 800; }
+  .p0-trust-row {
+    display: flex; gap: 9px; padding: 10px 12px;
+    border-bottom: 1px solid #F3F0FA;
+  }
+  .p0-trust-row:last-of-type { border-bottom: 0; }
+  .p0-trust-av {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, #FFA77B, #FF7A50);
+    color: #fff; font-weight: 900; font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .p0-trust-av.b { background: linear-gradient(135deg, #6433DF, #9D7AFE); }
+  .p0-trust-av.c { background: linear-gradient(135deg, #1AAD4B, #4FD27E); }
+  .p0-trust-info { flex: 1; min-width: 0; }
+  .p0-trust-name {
+    font-size: 11.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .p0-trust-tag {
+    font-size: 8.5px; font-weight: 700; color: #6433DF;
+    background: #EEEBFF; padding: 1px 5px; border-radius: 3px;
+  }
+  .p0-trust-act { font-size: 9.5px; color: #767676; font-weight: 600; margin-top: 1px; }
+  .p0-trust-act .star { color: #FFC700; letter-spacing: -1px; }
+  .p0-trust-quote {
+    font-size: 10px; color: #363636; font-weight: 500; margin-top: 3px;
+    padding-left: 6px; border-left: 2px solid #6433DF; line-height: 1.35;
+    font-style: normal;
+  }
+  .p0-trust-photo {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 9.5px; color: #6433DF; font-weight: 700;
+    background: #F5F2FE; padding: 2px 6px; border-radius: 3px; margin-top: 3px;
+  }
+  .p0-trust-meta {
+    padding: 8px 12px; background: #FBF9FF; border-top: 1px solid #EBE5FB;
+    font-size: 9.5px; color: #767676; font-weight: 700; text-align: center;
+  }
+  .p0-trust-meta b { color: #6433DF; font-weight: 800; }
+
+  /* 추천 선박 카드에 친구 트레일 뱃지 */
+  .p0-trust-trail {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 9px; font-weight: 800; color: #6433DF;
+    background: #EEEBFF; padding: 2px 5px; border-radius: 3px;
+  }
+  .p0-trust-trail::before {
+    content: ""; width: 4px; height: 4px; border-radius: 50%;
+    background: #6433DF;
+  }
+
+  /* AF-Agent · LLM 인과관계 기반 수익 분배 카드 */
+  .p0-contrib {
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 14px;
+    overflow: hidden; max-width: 296px;
+  }
+  .p0-contrib-head {
+    padding: 9px 12px; background: #191919;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .p0-contrib-tg {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 9.5px; font-weight: 800; color: #FFC700; letter-spacing: -0.2px;
+  }
+  .p0-contrib-tg .icon {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: #FFC700; color: #191919;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 900;
+  }
+  .p0-contrib-pat {
+    font-size: 8.5px; font-weight: 800; color: #191919;
+    background: #FFC700; padding: 2px 6px; border-radius: 3px; letter-spacing: -0.2px;
+  }
+  .p0-contrib-title {
+    padding: 10px 12px 4px;
+    font-size: 12px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+  }
+  .p0-contrib-bar {
+    display: flex; height: 10px; margin: 4px 12px 8px;
+    border-radius: 5px; overflow: hidden;
+  }
+  .p0-contrib-bar > div { height: 100%; }
+  .p0-contrib-list {
+    padding: 4px 12px 10px;
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  .p0-contrib-row {
+    display: flex; align-items: center; gap: 7px;
+    padding: 5px 0;
+  }
+  .p0-contrib-row .cdot {
+    width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
+  }
+  .p0-contrib-info {
+    flex: 1; min-width: 0; display: flex; flex-direction: column;
+  }
+  .p0-contrib-info .nm {
+    font-size: 11px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+  }
+  .p0-contrib-info .act {
+    font-size: 9px; color: #767676; font-weight: 600; margin-top: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .p0-contrib-row .pct {
+    font-size: 10.5px; font-weight: 800; color: #363636; min-width: 28px; text-align: right;
+  }
+  .p0-contrib-row .amt {
+    font-size: 11px; font-weight: 800; color: #0041FF;
+    min-width: 56px; text-align: right; letter-spacing: -0.3px;
+  }
+  .p0-contrib-foot {
+    padding: 9px 12px; background: #F5F2FE; border-top: 1px solid #EBE5FB;
+    font-size: 10px; color: #363636; font-weight: 700; text-align: center;
+  }
+  .p0-contrib-foot b { color: #0041FF; font-weight: 900; }
+
+  /* F1~F4: push CTA to bottom of body so content top-aligns, CTA bottom-aligns */
+  .p1-cta-wrap, .p2-cta-wrap, .p3-cta-wrap, .p4-cta-wrap { margin-top: auto; }
+
+  /* PATCH 4: 기존 협업필터링 vs AF-Agent 대비 카드 */
+  .p0-vs {
+    display: grid; grid-template-columns: 1fr 22px 1fr;
+    max-width: 296px; align-items: stretch;
+    background: #FFF; border: 1px solid #EEE; border-radius: 14px;
+    overflow: hidden;
+  }
+  .p0-vs > div { padding: 9px 11px; }
+  .p0-vs-old { background: #F8F8F8; }
+  .p0-vs-old .lbl {
+    font-size: 8.5px; font-weight: 800; color: #999;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .p0-vs-old .tx {
+    font-size: 10.5px; font-weight: 700; color: #767676;
+    margin-top: 4px; line-height: 1.35;
+  }
+  .p0-vs-old .sub { font-size: 8.5px; color: #AAA; font-weight: 700; margin-top: 4px; }
+  .p0-vs-vs {
+    background: #FFF; display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 900; color: #AAA; padding: 0 !important;
+    border-left: 1px dashed #E5E5E5; border-right: 1px dashed #E5E5E5;
+    letter-spacing: 0;
+  }
+  .p0-vs-new { background: linear-gradient(135deg, #EEEBFF, #F5F2FE); }
+  .p0-vs-new .lbl {
+    font-size: 8.5px; font-weight: 800; color: #6433DF;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .p0-vs-new .tx {
+    font-size: 10.5px; font-weight: 800; color: #191919;
+    margin-top: 4px; line-height: 1.35;
+  }
+  .p0-vs-new .sub { font-size: 8.5px; color: #6433DF; font-weight: 800; margin-top: 4px; }
+
+  /* PATCH 1: 컨텍스트 프롬프트 인젝션 카드 (다크 코드블록 톤) */
+  .p0-prompt-inj {
+    background: #0F0F0F; border-radius: 14px; overflow: hidden;
+    max-width: 296px;
+  }
+  .p0-prompt-head {
+    padding: 9px 12px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid #2A2A2A;
+  }
+  .p0-prompt-tg {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 9.5px; font-weight: 800; color: #00BFD3; letter-spacing: -0.2px;
+  }
+  .p0-prompt-pat {
+    font-size: 8.5px; font-weight: 800; color: #191919;
+    background: #FFC700; padding: 2px 6px; border-radius: 3px; letter-spacing: -0.2px;
+  }
+  .p0-prompt-body {
+    padding: 11px 12px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 9.5px; line-height: 1.7; color: #E5E5E5;
+  }
+  .p0-prompt-body .pk { color: #00BFD3; font-weight: 700; }
+  .p0-prompt-body .pv { color: #FFC700; font-weight: 700; }
+  .p0-prompt-body .sp { color: #767676; }
+  .p0-prompt-body .arr { color: #FFA77B; font-weight: 800; }
+  .p0-prompt-foot {
+    padding: 8px 12px; background: #000;
+    font-size: 9px; color: #767676; font-weight: 700; text-align: center;
+    letter-spacing: -0.2px;
+  }
+  .p0-prompt-foot b { color: #00BFD3; font-weight: 800; }
+
+  /* PATCH 2: 낚시 전문가 페르소나 정식체 예시 callout */
+  .p0-persona-ex {
+    background: #F5F2FE; border-left: 3px solid #6433DF;
+    border-radius: 0 10px 10px 0; overflow: hidden;
+    max-width: 296px;
+  }
+  .p0-persona-ex .ex-tg {
+    padding: 7px 11px 0;
+    font-size: 8.5px; font-weight: 800; color: #6433DF;
+    letter-spacing: 0.04em;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .p0-persona-ex .ex-body {
+    padding: 5px 11px 10px;
+    font-size: 12px; font-weight: 600; color: #191919;
+    line-height: 1.55; letter-spacing: -0.3px;
+  }
+  .p0-persona-ex .ex-body b { font-weight: 800; color: #6433DF; }
+
+  /* PATCH 5: AI 봇 아바타 + 라벨 */
+  .p0-trust-av.bot {
+    background: linear-gradient(135deg, #0041FF, #6433DF);
+    font-size: 9.5px; letter-spacing: 0; font-weight: 900;
+  }
+  .p0-trust-name .bot-tag {
+    font-size: 8.5px; font-weight: 800; color: #FFF;
+    background: linear-gradient(135deg, #0041FF, #6433DF);
+    padding: 1px 5px; border-radius: 3px;
+    display: inline-flex; align-items: center; gap: 3px;
+    letter-spacing: -0.2px;
+  }
 
   /* ====================================================================
      PHONE 1 — 패키지빌더 (supplier console)
@@ -1201,8 +1464,8 @@
   <header class="page-head">
     <div>
       <div class="ph-eyebrow"><b>한국관광공사 OpenAPI 활용 사업</b> · 본 사업 5개월 산출물 v1</div>
-      <h1>어바웃피싱<span class="dot">.</span> X <span class="em">한국관광공사 TourAPI</span><br>"이번 주말 청사포 배낚시 예약할래?" 한 문장이 작동시키는 4개 기능</h1>
-      <p>회원이 챗봇에 한 줄만 입력하면 — 미리 공급자가 <b>만들어 둔 SKU(F1)</b>가 매칭되고, AI가 출조 직후 <b>5단계 권역 코스(F2)</b>를 자동 제안하며, 1박이 필요하면 <b>Fishing Stay 매칭(F3)</b>으로 연결, 결제 한 번이면 <b>5개 공급자에 7일 안에 자동 분배(F4)</b>됩니다. 모두 한 번의 대화 안에서 일어납니다.</p>
+      <h1>어바웃피싱<span class="dot">.</span> <span class="em">AF-Agent</span>가<br>"지인이 다녀온 청사포배 예약할래?"라고<br>사람처럼 말 거는 <span class="em">신뢰 기반 추천 엔진</span></h1>
+      <p>AF-Agent는 검색어를 정리해주는 AI가 아니라 <b>지인의 신뢰와 실시간 데이터를 결합해 사람처럼 말을 거는 구조</b>입니다. 멀티모달 RAG · 컨텍스트 프롬프트 인젝션 · 낚시 전문가 페르소나 · LLM 인과관계 추론 — 4 엔진이 <b>등록 특허 5건</b>으로 보호됩니다. 지인이 추천한 경로로 예약이 완료되면 <b>그 지인에게 수익이 자동 분배</b>되며, 출조 이후 자원(F1·F2·F3) 결제도 한 번에 묶여 <b>F4 정산 엔진이 7일 안에 자동 분배</b>합니다. <b>2026 Q3 OSA 베타</b>로 부산 어선 데이터와 부산 낚시 커뮤니티 위에서 정확도를 가장 먼저 검증합니다.</p>
     </div>
     <div class="meta-strip">
       <div class="ms accent"><b>5개월</b>협약 산출물</div>
@@ -1231,13 +1494,13 @@
       <div class="jstep f0">
         <div class="jstep-h">
           <div class="jstep-fid">F0</div>
-          <div class="jstep-type">B2C 진입</div>
+          <div class="jstep-type">AF-AGENT</div>
         </div>
-        <div class="jstep-title">AI 챗봇 한 줄 입력</div>
-        <div class="jstep-desc">"이번 주말 청사포 배낚시 예약할래?" 한 문장만 입력. AI가 지역·날짜·시즌 어종·예산을 동시에 파싱.</div>
+        <div class="jstep-title">신뢰 기반 발화</div>
+        <div class="jstep-desc">지인 신뢰 + 실시간 데이터 + 페르소나 발화 + 인과관계 추론. 4 엔진을 5건 특허로 보호. 추천한 지인에게 수익 자동 분배.</div>
         <div class="jstep-actor">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
-          회원 · <b>송지영 가족</b>
+          회원 · <b>송지영</b>
         </div>
       </div>
 
@@ -1321,29 +1584,29 @@
       <div class="lc f0">
         <div class="lc-head">
           <div class="lc-fid">F0</div>
-          <div class="lc-type">B2C · 진입 화면</div>
+          <div class="lc-type">B2C · AF-Agent 진입</div>
         </div>
         <div class="lc-h">
-          <div class="lc-title">AI 챗봇 한 줄 진입</div>
-          <div class="lc-sub">회원이 한 문장만 입력 → AI가 4개 기능을 동시 호출</div>
+          <div class="lc-title">AF-Agent · 신뢰 기반 추천</div>
+          <div class="lc-sub">지인 신뢰 + 실시간 데이터로 사람처럼 말 거는 AI · 추천자에게 자동 분배</div>
         </div>
         <div class="lc-kpis">
           <div class="lc-kpi">
-            <div class="v">1<span class="u">문장</span></div>
-            <div class="l">사용자 입력</div>
+            <div class="v">5<span class="u">건</span></div>
+            <div class="l">등록 특허 보호</div>
           </div>
           <div class="lc-kpi">
-            <div class="v">4<span class="u">초</span></div>
-            <div class="l">AI 매칭 분석</div>
+            <div class="v">4<span class="u">엔진</span></div>
+            <div class="l">AI 핵심 기술</div>
           </div>
           <div class="lc-kpi">
-            <div class="v">132<span class="u">곳</span></div>
-            <div class="l">POI 후보 풀</div>
+            <div class="v">2026 Q3</div>
+            <div class="l">OSA 베타 출시</div>
           </div>
         </div>
         <div class="lc-kto">
           <div class="kto-tag">KTO</div>
-          <div class="kto-tx">한 문장에서 <b>지역·시즌·일행</b>을 동시 파싱해 TourAPI에 질의</div>
+          <div class="kto-tx">부산 어선 데이터 + 부산 낚시 커뮤니티 위에서 <b>OSA 정확도 검증</b></div>
         </div>
       </div>
 
@@ -1367,8 +1630,8 @@
             <div class="who">
               <div class="ai-av">AF</div>
               <div>
-                <div class="name">어바웃피싱 AI<span class="dot">.</span></div>
-                <div class="status">권역 패키지 어시스턴트</div>
+                <div class="name">AF-Agent<span class="dot">.</span></div>
+                <div class="status">신뢰 기반 추천 · 특허 5건</div>
               </div>
             </div>
             <button class="more" aria-label="more">
@@ -1382,32 +1645,95 @@
 
             <div class="p0-ai-row">
               <div class="p0-av-sm">AF</div>
-              <div class="p0-bubble in">안녕하세요! 출조부터 일정까지 한 번에 짜드릴게요.<br/><b>지금 5월은 청사포 갑오징어 피크</b>예요.</div>
+              <div class="p0-bubble in">송지영님 출조 친구들 활동 보고 있다가 <b>한 가지 알려드릴 게</b> 있어요.</div>
             </div>
 
             <div class="p0-user-row">
-              <div class="p0-bubble user">이번 주말 청사포 배낚시 예약할래?</div>
+              <div class="p0-bubble user">이번 주말 청사포 갈 만한 배 있어?</div>
             </div>
             <div class="p0-user-time">오후 8:12 · 읽음</div>
 
+            <!-- 4 engines indicator -->
+            <div class="p0-engines">
+              <span class="p0-engine"><span class="dot"></span>멀티모달 RAG</span>
+              <span class="p0-engine"><span class="dot"></span>컨텍스트 인젝션</span>
+              <span class="p0-engine"><span class="dot"></span>전문가 페르소나</span>
+              <span class="p0-engine"><span class="dot"></span>인과관계 추론</span>
+            </div>
+
+            <!-- AI response — the key narrative quote -->
             <div class="p0-ai-row">
               <div class="p0-av-sm">AF</div>
               <div class="p0-ai-col">
-                <div class="p0-ai-meta">
-                  <span>TourAPI 매칭</span>
-                  <span class="d"></span>
-                  <span><b>4초</b> 분석</span>
-                  <span class="d"></span>
-                  <span>POI 132곳 → <b>3척</b> 선별</span>
-                </div>
-                <div class="p0-bubble in">
-                  <b>토요일 청사포항 출항</b> 기준 3척 골랐어요. 일행 <b>성인 2 · 초보 포함</b> 프로필에 맞춰 갑오징어 좌석부터 정렬했어요.
+
+                <!-- PATCH 4: 기존 협업필터링 vs AF-Agent 대비 -->
+                <div class="p0-vs">
+                  <div class="p0-vs-old">
+                    <div class="lbl">기존 추천</div>
+                    <div class="tx">"A가 이 배 탔으니<br/>지인 B에게도 추천"</div>
+                    <div class="sub">숫자만 보는 협업 필터링</div>
+                  </div>
+                  <div class="p0-vs-vs">VS</div>
+                  <div class="p0-vs-new">
+                    <div class="lbl">AF-Agent</div>
+                    <div class="tx">친구의 <b>맥락</b>과<br/><b>신뢰의 이유</b>를 이해</div>
+                    <div class="sub">특허 5건 보호</div>
+                  </div>
                 </div>
 
+                <div class="p0-bubble in">
+                  <b>지인</b>이 지난주에 <b>이 배</b> 타고 <b>선장님 친절하다고</b> 칭찬했어. 그리고 부산에서 <b>감성돔 잡은 사진</b>도 올렸더군. 마침 이번 주 네가 가려는 <b>물때(2물)</b>랑 딱 맞는데, <b>청사포배 예약할래?</b>
+                </div>
+
+                <!-- 지인 신뢰 시그널 카드 (PATCH 3: 멀티모달 RAG 3입력 라벨링) -->
+                <div class="p0-trust">
+                  <div class="p0-trust-head">
+                    <span class="p0-trust-tg">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#6433DF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+                      멀티모달 RAG · 3입력
+                    </span>
+                    <span class="p0-trust-cnt"><b>예약이력</b>·<b>조황사진</b>·<b>리뷰</b></span>
+                  </div>
+
+                  <div class="p0-trust-row">
+                    <div class="p0-trust-av">김</div>
+                    <div class="p0-trust-info">
+                      <div class="p0-trust-name">김바다<span class="p0-trust-tag">도시어부 크루</span></div>
+                      <div class="p0-trust-act">7일 전 청해호 탑승 · <span class="star">★★★★★</span></div>
+                      <div class="p0-trust-quote">"선장님 친절하시고 포인트 잘 짚어주심 — 진짜 좋음"</div>
+                    </div>
+                  </div>
+
+                  <div class="p0-trust-row">
+                    <div class="p0-trust-av b">박</div>
+                    <div class="p0-trust-info">
+                      <div class="p0-trust-name">박낚시<span class="p0-trust-tag">크루</span></div>
+                      <div class="p0-trust-act">3일 전 · 부산 감성돔 5마리</div>
+                      <div class="p0-trust-photo">
+                        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/></svg>
+                        조황 사진 4장 공유
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- PATCH 5: 지인 소유 AI 봇 추천 경로 -->
+                  <div class="p0-trust-row">
+                    <div class="p0-trust-av bot">AI</div>
+                    <div class="p0-trust-info">
+                      <div class="p0-trust-name">정수영의 AF-Agent<span class="bot-tag">AI 봇</span></div>
+                      <div class="p0-trust-act">정수영님 출조 스타일 학습 → 청해호 매칭</div>
+                      <div class="p0-trust-quote">"네 패턴이랑 잘 맞아 — 정수영의 AI 봇이 추천"</div>
+                    </div>
+                  </div>
+
+                  <div class="p0-trust-meta">친구 신뢰도 평균 <b>4.8 / 5</b> · 의미론적 매칭 <b>89%</b> · <b>2 직접 + 1 AI 봇</b></div>
+                </div>
+
+                <!-- 추천 선박 카드 (친구 트레일 표시) -->
                 <div class="p0-card">
                   <div class="p0-card-head">
-                    <div class="tg"><span class="tg-dot"></span>AI 매칭 89%</div>
-                    <div class="picks"><b>3</b>척 추천</div>
+                    <div class="tg"><span class="tg-dot"></span>친구가 다녀간 배</div>
+                    <div class="picks">매칭 <b>89%</b></div>
                   </div>
                   <div class="p0-region">
                     <div class="map-ic">
@@ -1415,7 +1741,7 @@
                     </div>
                     <div>
                       <div class="where"><span class="pin">●</span> 청사포항 · 부산 해운대구</div>
-                      <div class="when">2026.05.23 토 · 04:30~05:00 출항</div>
+                      <div class="when">2026.05.23 토 · 05:00 출항 · <b style="color:#0041FF">2물 · 감성돔 시즌</b></div>
                     </div>
                   </div>
 
@@ -1425,151 +1751,134 @@
                         <span class="rib">LIVE</span>
                       </div>
                       <div class="p0-boat-body">
-                        <div class="p0-boat-name">청해호 · 김명석 선장</div>
-                        <div class="p0-boat-cap">청사포항 7호 부두 · 14인승</div>
+                        <div class="p0-boat-name">바다이야기호 · 김명석 선장</div>
+                        <div class="p0-boat-cap">
+                          <span class="p0-trust-trail">김바다 외 1명 다녀감</span>
+                        </div>
                         <div class="p0-boat-time">
                           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                          05:00 출항 · 6시간
+                          05:00 출항 · 6시간 · 친절도 ★★★★★
                         </div>
                         <div class="p0-boat-species">
-                          <span class="sp hot">● 갑오징어</span>
-                          <span class="sp">가자미</span>
-                          <span class="sp">우럭</span>
-                        </div>
-                      </div>
-                      <div class="p0-boat-price">
-                        <div class="seats tight"><i></i>4석</div>
-                        <div class="strike">₩125,000</div>
-                        <div class="won">₩105,000<small> /인</small></div>
-                      </div>
-                    </div>
-
-                    <div class="p0-boat">
-                      <div class="p0-boat-thumb t2"></div>
-                      <div class="p0-boat-body">
-                        <div class="p0-boat-name">푸른돌고래호 · 박재석 선장</div>
-                        <div class="p0-boat-cap">청사포항 3호 부두 · 20인승</div>
-                        <div class="p0-boat-time">
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                          04:30 출항 · 8시간 원거리
-                        </div>
-                        <div class="p0-boat-species">
-                          <span class="sp hot">● 갑오징어</span>
-                          <span class="sp">광어</span>
-                        </div>
-                      </div>
-                      <div class="p0-boat-price">
-                        <div class="seats"><i></i>7석</div>
-                        <div class="won">₩135,000<small> /인</small></div>
-                      </div>
-                    </div>
-
-                    <div class="p0-boat">
-                      <div class="p0-boat-thumb t3"></div>
-                      <div class="p0-boat-body">
-                        <div class="p0-boat-name">해운대수산호 · 정형우 선장</div>
-                        <div class="p0-boat-cap">청사포항 5호 부두 · 12인승</div>
-                        <div class="p0-boat-time">
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                          05:00 출항 · 일요일
-                        </div>
-                        <div class="p0-boat-species">
-                          <span class="sp">갑오징어</span>
+                          <span class="sp hot">● 감성돔</span>
+                          <span class="sp">도다리</span>
                           <span class="sp">초보 OK</span>
                         </div>
                       </div>
                       <div class="p0-boat-price">
-                        <div class="seats"><i></i>9석</div>
-                        <div class="won">₩95,000<small> /인</small></div>
+                        <div class="seats tight"><i></i>2석 남음</div>
+                        <div class="won">₩105,000<small> /인</small></div>
                       </div>
                     </div>
                   </div>
 
                   <div class="p0-card-foot">
-                    <span class="ft-tx">F1 빌더 SKU 자동 매칭</span>
-                    <span class="more">전체 12척 ›</span>
+                    <span class="ft-tx">F1 빌더 SKU · 김바다 추천 경로</span>
+                    <span class="more">다른 배 비교 ›</span>
                   </div>
                 </div>
 
+                <!-- PATCH 1: 컨텍스트 프롬프트 인젝션 시각화 -->
+                <div class="p0-prompt-inj">
+                  <div class="p0-prompt-head">
+                    <span class="p0-prompt-tg">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#00BFD3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                      컨텍스트 프롬프트 인젝션
+                    </span>
+                    <span class="p0-prompt-pat">PATENT</span>
+                  </div>
+                  <div class="p0-prompt-body">
+                    <span class="pk">user</span><span class="sp"> :</span> <span class="pv">"초보 낚시꾼"</span><br/>
+                    <span class="pk">target</span><span class="sp"> :</span> <span class="pv">감성돔 · 도다리</span><br/>
+                    <span class="pk">tide</span><span class="sp"> :</span> <span class="pv">2물</span><br/>
+                    <span class="pk">trust</span><span class="sp"> :</span> 도시어부A 만족도 <span class="pv">최상</span><br/>
+                    <span class="pk">port</span><span class="sp"> :</span> 청사포항 · 토요일 새벽<br/>
+                    <span class="arr">→</span> <span class="pk">AF-Agent</span> 실시간 발화 생성
+                  </div>
+                  <div class="p0-prompt-foot">물때·날씨·선호·신뢰도 → <b>거대 프롬프트</b> → 발화</div>
+                </div>
+
+                <!-- PATCH 2: 낚시 전문가 페르소나 — 정식체 발화 예시 -->
+                <div class="p0-persona-ex">
+                  <div class="ex-tg">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#6433DF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                    전문가 페르소나 · 자동 생성 발화
+                  </div>
+                  <div class="ex-body">
+                    "회원님, 마침 낚시 크루 <b>김바다님</b>이 지난달 감성돔 5마리 잡은 <b>청사포항 바다이야기호</b>에 두 자리 남았습니다. 예약해 드릴까요?"
+                  </div>
+                </div>
+
+                <!-- AI follow-up — patent narrative -->
                 <div class="p0-bubble in">
-                  <b>청해호</b>로 골랐어요. 11시 입항 후 <b>오후 5시간</b>이 비어요 — 권역 코스도 짜드릴까요?
+                  예약하시면 추천에 기여한 <b>김바다님께 수수료 자동 분배</b>해드려요. 단순 검색이 아니라 <b>지인 신뢰가 보상받는 구조</b> — 저희 등록 특허 5건이 정의하는 핵심이에요.
                 </div>
 
-                <div class="p0-course">
-                  <div class="p0-course-head">
-                    <div class="tag">
-                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-                      F2 AI 권역 코스
-                    </div>
-                    <div class="t"><s>낚시 끝나고 뭐하지?</s> — <b>결말 5단계</b></div>
-                    <div class="ac">
-                      <span class="lbl">부산 권역 POI 48곳</span>
-                      <span class="val">87<span class="pc">%</span></span>
-                    </div>
-                    <div class="bar"><i></i></div>
+                <!-- LLM 인과관계 추론 기반 수익 분배 카드 -->
+                <div class="p0-contrib">
+                  <div class="p0-contrib-head">
+                    <span class="p0-contrib-tg">
+                      <span class="icon">⚙</span>
+                      LLM 인과관계 추론
+                    </span>
+                    <span class="p0-contrib-pat">PATENT</span>
+                  </div>
+                  <div class="p0-contrib-title">예약 시 지인 기여도 자동 분배</div>
+
+                  <div class="p0-contrib-bar">
+                    <div style="flex:80; background:#0041FF;"></div>
+                    <div style="flex:15; background:#6433DF;"></div>
+                    <div style="flex:5; background:#AAAAAA;"></div>
                   </div>
 
-                  <div class="p0-course-tl">
-                    <div class="p0-tlr">
-                      <div class="p0-tlt">11:00</div>
-                      <div class="p0-tld"><span class="d" style="background:#191919; box-shadow:0 0 0 2px rgba(25,25,25,0.18);"></span><span class="ln"></span></div>
-                      <div class="p0-tlc">
-                        <span class="p0-tlcat start">입항</span>
-                        <div class="p0-tlp">청사포항</div>
+                  <div class="p0-contrib-list">
+                    <div class="p0-contrib-row">
+                      <span class="cdot" style="background:#0041FF"></span>
+                      <div class="p0-contrib-info">
+                        <span class="nm">김바다</span>
+                        <span class="act">"진짜 좋음" 댓글 + 탑승 이력</span>
                       </div>
+                      <span class="pct">80%</span>
+                      <span class="amt">₩7,560</span>
                     </div>
-                    <div class="p0-tlr">
-                      <div class="p0-tlt">12:00</div>
-                      <div class="p0-tld"><span class="d"></span><span class="ln"></span></div>
-                      <div class="p0-tlc">
-                        <span class="p0-tlcat food">미식</span>
-                        <div class="p0-tlp">해운대 자갈치회센터</div>
-                        <div class="p0-tlx">갑오징어 회 · 일행 적합 94%</div>
+                    <div class="p0-contrib-row">
+                      <span class="cdot" style="background:#6433DF"></span>
+                      <div class="p0-contrib-info">
+                        <span class="nm">박낚시</span>
+                        <span class="act">감성돔 조황 사진 4장</span>
                       </div>
+                      <span class="pct">15%</span>
+                      <span class="amt">₩1,418</span>
                     </div>
-                    <div class="p0-tlr">
-                      <div class="p0-tlt">13:30</div>
-                      <div class="p0-tld"><span class="d" style="background:#B87A00;"></span><span class="ln"></span></div>
-                      <div class="p0-tlc">
-                        <span class="p0-tlcat cafe">카페</span>
-                        <div class="p0-tlp">청사포 다릿돌전망대</div>
+                    <div class="p0-contrib-row">
+                      <span class="cdot" style="background:linear-gradient(135deg,#0041FF,#6433DF)"></span>
+                      <div class="p0-contrib-info">
+                        <span class="nm">정수영의 AF-Agent <span style="font-size:8.5px;font-weight:800;color:#fff;background:linear-gradient(135deg,#0041FF,#6433DF);padding:1px 4px;border-radius:3px;margin-left:3px;">AI 봇</span></span>
+                        <span class="act">정수영님 출조 패턴 학습 → 매칭 제안</span>
                       </div>
-                    </div>
-                    <div class="p0-tlr">
-                      <div class="p0-tlt">14:30</div>
-                      <div class="p0-tld"><span class="d" style="background:#1AAD4B;"></span><span class="ln"></span></div>
-                      <div class="p0-tlc">
-                        <span class="p0-tlcat spot">관광</span>
-                        <div class="p0-tlp">해운대 블루라인파크</div>
-                        <div class="p0-tlx">청사포↔미포 해변열차</div>
-                      </div>
-                    </div>
-                    <div class="p0-tlr">
-                      <div class="p0-tlt">16:30</div>
-                      <div class="p0-tld"><span class="d" style="background:#6433DF;"></span></div>
-                      <div class="p0-tlc">
-                        <span class="p0-tlcat spa">온천</span>
-                        <div class="p0-tlp">해운대 스파랜드 센텀</div>
-                      </div>
+                      <span class="pct">5%</span>
+                      <span class="amt">₩472</span>
                     </div>
                   </div>
 
-                  <div class="p0-course-foot">
-                    <div class="mt">총 <b>27.3km</b> · 1h 14m</div>
-                    <button class="add-btn">코스 담기</button>
+                  <div class="p0-contrib-foot">
+                    추천 보상 합계 <b>₩9,450</b> · <b>직접 추천 + AI 봇 추천</b> 모두 자동 분배 (F4 정산 엔진)
                   </div>
                 </div>
 
+                <!-- Quick replies -->
                 <div class="p0-qr-row">
-                  <button class="p0-qr primary">예 코스도 같이</button>
-                  <button class="p0-qr">출조만 예약</button>
-                  <button class="p0-qr">다른 선박</button>
+                  <button class="p0-qr primary">예약 진행</button>
+                  <button class="p0-qr">친구에게 물어보기</button>
+                  <button class="p0-qr">다른 추천</button>
                 </div>
 
                 <div class="p0-ai-meta">
-                  <span>● 결제 1회 → 5개 공급자 자동 분배</span>
+                  <span>● 특허 5건 보호</span>
                   <span class="d"></span>
-                  <span>F4 정산</span>
+                  <span>OSA 베타 2026 Q3</span>
+                  <span class="d"></span>
+                  <span>부산 권역 검증</span>
                 </div>
               </div>
             </div>
@@ -1578,22 +1887,22 @@
 
           <div class="p0-cta">
             <div class="p0-cta-tx">
-              <div class="l"><b>청해호</b> · 5/23 토 · 2인 · 코스 포함</div>
-              <div class="price">₩285,000<small>합계</small></div>
+              <div class="l"><b>바다이야기호</b> · 5/23 토 · 2인 · 김바다 추천</div>
+              <div class="price">₩210,000<small>합계</small></div>
             </div>
             <button class="p0-cta-btn">
               예약 확정하기
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </button>
-            <div class="p0-cta-sub">결제 즉시 <b>5개 공급자 자동 분배</b> · 세금계산서 100% 자동</div>
+            <div class="p0-cta-sub">결제 즉시 <b>김바다님께 추천 수익 ₩7,560 자동 분배</b> · 특허 5건 보호</div>
             <div style="width:120px; height:4px; border-radius:2px; background:#191919; margin: 8px auto 0;"></div>
           </div>
 
         </div>
       </div>
       <div class="phone-cap">
-        <div class="cap-t">AI 챗봇 진입</div>
-        <div class="cap-d">한 문장으로 4기능 동시 작동</div>
+        <div class="cap-t">AF-Agent · 신뢰 기반 발화</div>
+        <div class="cap-d">4 엔진 · 특허 5건 · 추천자 수익 분배</div>
       </div>
     </div>
 
