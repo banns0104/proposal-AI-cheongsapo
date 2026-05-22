@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>어바웃피싱 X 한국관광공사 OpenAPI · 본 사업 5개월 산출물 v1 (v4)</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+  /**
+ * Minified by jsDelivr using clean-css v5.3.3.
+ * Original file: /gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+@font-face{font-family:Pretendard;font-weight:900;font-display:swap;src:local('Pretendard Black'),url("ab7d560c-7f08-4340-abf1-6b0f0669e0a0") format('woff2'),url("b0b33485-215a-42e9-ae02-dd6815b52424") format('woff')}@font-face{font-family:Pretendard;font-weight:800;font-display:swap;src:local('Pretendard ExtraBold'),url("6bb9b5c2-9166-4f04-893a-f57bc9ace55e") format('woff2'),url("58381e63-b387-41f0-b9ce-f91641b84a0a") format('woff')}@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:local('Pretendard Bold'),url("3fc22c76-a761-41ff-8945-ecbde5acb8d6") format('woff2'),url("f263df46-04ee-457a-8b86-f3da40322240") format('woff')}@font-face{font-family:Pretendard;font-weight:600;font-display:swap;src:local('Pretendard SemiBold'),url("2359e244-2d35-4bce-bf74-170c91fe3ba1") format('woff2'),url("6fbf2c48-96c7-4e9e-97e6-df69830c28a1") format('woff')}@font-face{font-family:Pretendard;font-weight:500;font-display:swap;src:local('Pretendard Medium'),url("b3214764-6a42-4e06-aa32-2d3fa4e4bd3f") format('woff2'),url("f6094fe3-eaba-4a39-adc9-ef718760ce36") format('woff')}@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:local('Pretendard Regular'),url("84084929-eb73-4039-981a-2fef2ea24957") format('woff2'),url("bc15d85a-0581-4da9-99d1-d3d0b9e1c3ce") format('woff')}@font-face{font-family:Pretendard;font-weight:300;font-display:swap;src:local('Pretendard Light'),url("dcaceeed-721b-44a0-a4a5-692d40aef9b3") format('woff2'),url("7e72ec25-f882-45d6-b952-841b9262dd15") format('woff')}@font-face{font-family:Pretendard;font-weight:200;font-display:swap;src:local('Pretendard ExtraLight'),url("d5ff6b5a-8c49-4b59-b2fa-2a14c00a2146") format('woff2'),url("7a74a4e0-b741-41bb-95d6-fdadc4ffe1ab") format('woff')}@font-face{font-family:Pretendard;font-weight:100;font-display:swap;src:local('Pretendard Thin'),url("b99c8363-3950-45af-b852-4137684921a4") format('woff2'),url("17098beb-8c62-44ca-bf27-e86bd385eee2") format('woff')}
+/*# sourceMappingURL=/sm/51b565c04cae0bb1ce2c86cd5d1809aca984a92cb3f8e3efe91c4d2950752c00.map */
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+  html, body {
+    font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+    letter-spacing: -0.3px;
+    line-height: 1.45;
+    color: #191919;
+    background: #ECEEF1;
+  }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+  :root {
+    --af-blue: #0041FF;
+    --af-blue-bg: #EEF8FF;
+    --fg-1: #191919;
+    --fg-2: #363636;
+    --fg-3: #767676;
+    --fg-4: #999999;
+    --fg-5: #AAAAAA;
+    --bg: #FFFFFF;
+    --surface-1: #F8F8F8;
+    --surface-2: #F3F3F3;
+    --surface-cool: #F5F7FA;
+    --border-1: #EEEEEE;
+    --border-2: #E0E0E0;
+    --orange: #FF4C14;
+    --money-coin: #FFC700;
+    --purple: #6433DF;
+    --purple-bg: #EEEBFF;
+    --green: #1AAD4B;
+    --green-bg: #E7F8F0;
+    --red: #EE0005;
+  }
+
+  /* ============== PAGE SHELL ============== */
+  .page { min-height: 100vh; padding: 56px 32px 80px; }
+
+  .page-head {
+    max-width: 1880px; margin: 0 auto 36px;
+    display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: end;
+  }
+  .ph-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 800; color: #767676;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .ph-eyebrow::before {
+    content: ""; width: 24px; height: 1px; background: #767676;
+  }
+  .ph-eyebrow b { color: #0041FF; }
+  .page-head h1 {
+    font-size: 38px; font-weight: 800;
+    letter-spacing: -1.2px; line-height: 1.15; color: #191919;
+  }
+  .page-head h1 .dot { color: #FFA77B; }
+  .page-head h1 .em { color: #0041FF; }
+  .page-head p {
+    margin-top: 14px;
+    font-size: 14px; color: #555555; max-width: 760px; line-height: 1.6;
+  }
+  .page-head p b { color: #191919; font-weight: 700; }
+
+  .meta-strip {
+    display: flex; flex-wrap: wrap; gap: 20px; align-items: center;
+    padding: 14px 18px;
+    background: #FFFFFF; border-radius: 12px;
+    border: 1px solid #EEEEEE;
+  }
+  .meta-strip .ms {
+    display: flex; flex-direction: column;
+    font-size: 11px; color: #767676; font-weight: 600;
+  }
+  .meta-strip .ms b {
+    font-size: 16px; color: #191919; font-weight: 800; letter-spacing: -0.4px;
+    margin-bottom: 2px;
+  }
+  .meta-strip .ms.accent b { color: #0041FF; }
+  .meta-strip .div { width: 1px; height: 28px; background: #EEEEEE; }
+
+  /* ============== USER JOURNEY DIAGRAM ============== */
+  .journey {
+    max-width: 1880px; margin: 0 auto 48px;
+    background: #FFFFFF; border-radius: 20px;
+    padding: 26px 32px 28px;
+    border: 1px solid #EEEEEE;
+  }
+  .journey-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .journey-head h2 {
+    font-size: 18px; font-weight: 800; color: #191919; letter-spacing: -0.4px;
+  }
+  .journey-head h2 .tag {
+    display: inline-flex; align-items: center; height: 22px; padding: 0 10px;
+    background: #191919; color: #FFC700; border-radius: 4px;
+    font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+    margin-right: 10px; vertical-align: 2px;
+  }
+  .journey-head .legend {
+    display: flex; gap: 14px; font-size: 11px; color: #767676; font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .journey-head .legend span {
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .journey-head .legend i {
+    width: 8px; height: 8px; border-radius: 2px; display: inline-block;
+  }
+
+  .journey-flow {
+    display: grid; grid-template-columns: 1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr; align-items: stretch;
+    gap: 0;
+  }
+  @media (max-width: 1480px) {
+    .journey-flow {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .journey-flow .jarrow { display: none; }
+  }
+  @media (max-width: 760px) {
+    .journey-flow { grid-template-columns: 1fr; }
+  }
+  .jstep.f0 .jstep-fid { background: linear-gradient(135deg, #0041FF, #6433DF); color: #fff; }
+  .jstep.f0 .jstep-type { background: #EEF8FF; color: #0041FF; }
+  .jstep {
+    background: #F8F8F8; border-radius: 14px; padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 8px;
+    position: relative;
+  }
+  .jstep .jstep-h {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .jstep .jstep-fid {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; letter-spacing: -0.3px;
+  }
+  .jstep .jstep-type {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+    padding: 3px 7px; border-radius: 4px;
+  }
+  .jstep .jstep-title {
+    font-size: 15px; font-weight: 800; color: #191919;
+    letter-spacing: -0.4px; margin-top: 2px;
+  }
+  .jstep .jstep-desc {
+    font-size: 11.5px; color: #555; line-height: 1.5; font-weight: 500;
+  }
+  .jstep .jstep-actor {
+    margin-top: auto; padding-top: 10px;
+    font-size: 10.5px; color: #767676; font-weight: 700;
+    display: flex; align-items: center; gap: 5px;
+    border-top: 1px dashed #E5E5E5;
+  }
+  .jstep .jstep-actor b { color: #191919; }
+  .jstep.f1 .jstep-fid { background: #191919; color: #FFC700; }
+  .jstep.f1 .jstep-type { background: #191919; color: #FFC700; }
+  .jstep.f2 .jstep-fid { background: #EEEBFF; color: #6433DF; }
+  .jstep.f2 .jstep-type { background: #EEEBFF; color: #6433DF; }
+  .jstep.f3 .jstep-fid { background: #EEEBFF; color: #6433DF; }
+  .jstep.f3 .jstep-type { background: #EEEBFF; color: #6433DF; }
+  .jstep.f4 .jstep-fid { background: #191919; color: #FFC700; }
+  .jstep.f4 .jstep-type { background: #191919; color: #FFC700; }
+
+  .jarrow {
+    display: flex; align-items: center; justify-content: center;
+    color: #AAAAAA;
+  }
+
+  /* ============== PHONES GRID ============== */
+  .phones {
+    max-width: 1880px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(5, 396px); gap: 28px;
+    justify-content: center; align-items: start;
+  }
+  @media (max-width: 2080px) {
+    .phones { grid-template-columns: repeat(3, 396px); gap: 32px; }
+  }
+  @media (max-width: 1320px) {
+    .phones { grid-template-columns: repeat(2, 396px); gap: 40px; }
+  }
+  @media (max-width: 880px) {
+    .phones { grid-template-columns: 396px; }
+    .page-head { grid-template-columns: 1fr; }
+  }
+
+  /* ============== iPhone DEVICE FRAME ============== */
+  .device {
+    width: 396px; height: 870px;
+    background: #1c1c1e;
+    border-radius: 50px;
+    padding: 14px;
+    position: relative;
+    box-shadow:
+      0 0 0 1px #2a2a2c inset,
+      0 0 0 3px #050505,
+      0 18px 50px rgba(15, 20, 40, 0.18),
+      0 4px 12px rgba(15, 20, 40, 0.08);
+  }
+  .device::before {
+    /* side buttons left */
+    content: "";
+    position: absolute; left: -3px; top: 150px;
+    width: 3px; height: 90px;
+    background: #050505; border-radius: 2px 0 0 2px;
+    box-shadow: 0 110px 0 0 #050505;
+  }
+  .device::after {
+    /* power button right */
+    content: "";
+    position: absolute; right: -3px; top: 200px;
+    width: 3px; height: 110px;
+    background: #050505; border-radius: 0 2px 2px 0;
+  }
+  .device .dyn-island {
+    position: absolute;
+    top: 22px; left: 50%; transform: translateX(-50%);
+    width: 122px; height: 35px;
+    background: #050505;
+    border-radius: 100px;
+    z-index: 50;
+    pointer-events: none;
+  }
+  .device .dyn-island::after {
+    /* tiny camera dot */
+    content: "";
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #0a0a1a;
+    box-shadow: inset 0 0 0 1px rgba(60,80,160,0.3);
+  }
+  .device .phone {
+    width: 370px; height: 842px;
+    border-radius: 40px;
+    box-shadow: none;
+  }
+  .device .phone .tabs {
+    /* home indicator area visual sits inside the phone bottom safe area */
+    position: relative;
+  }
+  .device .phone .tabs::after {
+    content: "";
+    position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
+    width: 134px; height: 4px; border-radius: 2px; background: #191919;
+  }
+
+  .phone-wrap { display: flex; flex-direction: column; gap: 14px; }
+
+  /* ============== LABEL CARD ABOVE PHONE ============== */
+  .lc {
+    background: #FFFFFF; border-radius: 16px;
+    padding: 16px 18px 16px;
+    border: 1px solid #EEEEEE;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .lc-head {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .lc-fid {
+    width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 800;
+  }
+  .lc-type {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+    padding: 3px 7px; border-radius: 4px;
+  }
+  .lc-h .lc-title { font-size: 16px; font-weight: 800; color: #191919; letter-spacing: -0.4px; }
+  .lc-h .lc-sub { font-size: 11.5px; color: #767676; margin-top: 2px; line-height: 1.45; }
+  .lc-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .lc-kpi { background: #F8F8F8; border-radius: 10px; padding: 9px 10px; }
+  .lc-kpi .v { font-size: 15px; font-weight: 800; color: #191919; letter-spacing: -0.4px; line-height: 1.1; }
+  .lc-kpi .v .u { font-size: 11px; font-weight: 700; color: #363636; margin-left: 1px; }
+  .lc-kpi .l { font-size: 10px; color: #767676; font-weight: 600; margin-top: 3px; line-height: 1.3; }
+  .lc-kto {
+    display: flex; align-items: center; gap: 8px;
+    padding: 9px 11px; background: #F5F7FA;
+    border: 1px dashed #DCE3EC; border-radius: 8px;
+  }
+  .lc-kto .kto-tag {
+    flex-shrink: 0; font-size: 9px; font-weight: 900;
+    color: #0041FF; letter-spacing: -0.3px;
+    width: 26px; height: 22px; background: #FFF; border: 1px solid #DCE3EC; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lc-kto .kto-tx { font-size: 11px; font-weight: 700; color: #363636; line-height: 1.4; }
+  .lc-kto .kto-tx b { color: #0041FF; }
+  /* F0 entry (AI blue-purple); F1, F4 are B2B (black/yellow); F2, F3 are B2C (purple/blue) */
+  .lc.f0 .lc-fid { background: linear-gradient(135deg, #0041FF, #6433DF); color: #fff; }
+  .lc.f0 .lc-type { background: #EEF8FF; color: #0041FF; }
+  .lc.f1 .lc-fid { background: #191919; color: #FFC700; }
+  .lc.f1 .lc-type { background: #191919; color: #FFC700; }
+  .lc.f2 .lc-fid { background: #EEEBFF; color: #6433DF; }
+  .lc.f2 .lc-type { background: #EEEBFF; color: #6433DF; }
+  .lc.f3 .lc-fid { background: #EEEBFF; color: #6433DF; }
+  .lc.f3 .lc-type { background: #EEEBFF; color: #6433DF; }
+  .lc.f4 .lc-fid { background: #191919; color: #FFC700; }
+  .lc.f4 .lc-type { background: #191919; color: #FFC700; }
+
+  /* ============== PHONE FRAME ============== */
+  .phone {
+    width: 370px; height: 842px;
+    background: #FFFFFF; border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(20, 30, 60, 0.08), 0 1px 2px rgba(20, 30, 60, 0.04);
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .phone-cap {
+    text-align: center; padding: 4px 8px 0;
+  }
+  .phone-cap .cap-t {
+    font-size: 13px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+  }
+  .phone-cap .cap-d {
+    font-size: 11px; color: #767676; font-weight: 600; margin-top: 3px; letter-spacing: -0.3px;
+  }
+
+  /* shared status bar */
+  .sb {
+    height: 44px; padding: 0 22px; display: flex;
+    align-items: center; justify-content: space-between;
+    font-size: 14px; font-weight: 600; color: #191919;
+    flex-shrink: 0;
+  }
+  .sb .sb-r { display: flex; gap: 6px; align-items: center; }
+
+  /* shared app header */
+  .ah {
+    padding: 6px 20px 4px; display: flex;
+    align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .ah .ah-title { font-size: 22px; font-weight: 800; color: #191919; letter-spacing: -0.6px; }
+  .ah .ah-title .dot { color: #FFA77B; }
+  .ah .ah-r { display: flex; gap: 12px; align-items: center; color: #191919; }
+  .ah .ah-back { display: flex; align-items: center; gap: 6px; }
+
+  /* shared bottom tab bar (compact 56px) */
+  .tabs {
+    height: 60px; background: #FFFFFF; border-top: 1px solid #EEEEEE;
+    display: flex; padding-top: 8px;
+    flex-shrink: 0;
+  }
+  .tabs .t {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+    font-size: 9.5px; font-weight: 600; color: #AAAAAA;
+  }
+  .tabs .t.on { color: #191919; font-weight: 800; }
+  .tabs .t svg { width: 20px; height: 20px; }
+
+  /* ====================================================================
+     PHONE 0 — AI 챗봇 진입 (consumer entry point)
+     ==================================================================== */
+  .p0-chat-head {
+    padding: 4px 18px 12px; display: flex; align-items: center; gap: 12px;
+    border-bottom: 1px solid #F3F3F3; flex-shrink: 0;
+  }
+  .p0-chat-head .back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #191919; }
+  .p0-chat-head .who { display: flex; align-items: center; gap: 10px; flex: 1; }
+  .p0-chat-head .ai-av {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, #0041FF 0%, #6433DF 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 900; font-size: 12px; letter-spacing: -0.3px;
+    position: relative;
+  }
+  .p0-chat-head .ai-av::after {
+    content: ""; position: absolute; bottom: 0; right: 0;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #1AAD4B; border: 2px solid #fff;
+  }
+  .p0-chat-head .name { font-size: 14px; font-weight: 800; color: #191919; letter-spacing: -0.3px; }
+  .p0-chat-head .name .dot { color: #FFA77B; }
+  .p0-chat-head .status { font-size: 10.5px; color: #767676; font-weight: 600; margin-top: 1px; display: flex; align-items: center; gap: 4px; }
+  .p0-chat-head .status::before { content:""; width: 5px; height: 5px; border-radius: 50%; background: #1AAD4B; }
+  .p0-chat-head .more { color: #767676; }
+
+  .p0-body { flex: 1; overflow-y: auto; padding: 14px 14px 22px; display: flex; flex-direction: column; gap: 12px; }
+  .p0-body::-webkit-scrollbar { width: 0; }
+
+  .p0-day {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10.5px; font-weight: 700; color: #999;
+  }
+  .p0-day span { background: #F3F3F3; padding: 4px 10px; border-radius: 100px; letter-spacing: -0.2px; }
+
+  .p0-ai-row { display: flex; gap: 7px; align-items: flex-start; }
+  .p0-av-sm {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: linear-gradient(135deg, #0041FF 0%, #6433DF 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 900; font-size: 9.5px;
+    flex-shrink: 0;
+  }
+  .p0-bubble {
+    padding: 10px 13px; border-radius: 14px;
+    font-size: 13px; line-height: 1.5; letter-spacing: -0.2px;
+    max-width: 264px;
+  }
+  .p0-bubble.in { background: #F3F3F3; color: #191919; border-bottom-left-radius: 4px; }
+  .p0-bubble.in b { font-weight: 700; color: #0041FF; }
+
+  .p0-user-row { display: flex; justify-content: flex-end; }
+  .p0-bubble.user {
+    background: #0041FF; color: #fff;
+    border-bottom-right-radius: 4px; font-weight: 500;
+  }
+  .p0-user-time {
+    font-size: 9.5px; color: #999; font-weight: 600;
+    text-align: right; margin-right: 2px;
+  }
+
+  .p0-ai-col { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 0; }
+  .p0-ai-meta {
+    display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+    font-size: 9.5px; color: #767676; font-weight: 700;
+    padding: 0 2px;
+  }
+  .p0-ai-meta b { color: #191919; }
+  .p0-ai-meta .d { width: 3px; height: 3px; border-radius: 50%; background: #BBB; }
+
+  .p0-card {
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 14px;
+    overflow: hidden; max-width: 296px;
+  }
+  .p0-card-head {
+    padding: 11px 13px 9px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; border-bottom: 1px solid #F3F3F3;
+  }
+  .p0-card-head .tg {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 9.5px; font-weight: 800;
+    color: #6433DF; background: #EEEBFF; padding: 3px 7px; border-radius: 4px;
+  }
+  .p0-card-head .tg .tg-dot { width: 4px; height: 4px; border-radius: 50%; background: #6433DF; }
+  .p0-card-head .picks { font-size: 9.5px; color: #767676; font-weight: 600; }
+  .p0-card-head .picks b { color: #191919; font-weight: 800; }
+
+  .p0-region {
+    padding: 9px 13px; background: #F5F2FE;
+    display: flex; gap: 9px; align-items: center; border-bottom: 1px solid #EBE5FB;
+  }
+  .p0-region .map-ic {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: linear-gradient(135deg, #6433DF, #9D7AFE);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; flex-shrink: 0;
+  }
+  .p0-region .where { font-size: 11.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px; }
+  .p0-region .where .pin { color: #6433DF; }
+  .p0-region .when { font-size: 9.5px; color: #555; font-weight: 600; margin-top: 1px; }
+
+  .p0-boats { display: flex; flex-direction: column; }
+  .p0-boat {
+    display: flex; gap: 10px; padding: 11px 13px;
+    border-bottom: 1px solid #F5F5F5; position: relative;
+  }
+  .p0-boat:last-child { border-bottom: 0; }
+  .p0-boat.sel { background: #EEF8FF; }
+  .p0-boat.sel::before {
+    content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px;
+    background: #0041FF; border-radius: 0 2px 2px 0;
+  }
+  .p0-boat-thumb {
+    width: 56px; height: 56px; border-radius: 9px;
+    background: linear-gradient(135deg, #33628C 0%, #1B3654 100%);
+    flex-shrink: 0; position: relative; overflow: hidden;
+  }
+  .p0-boat-thumb.t2 { background: linear-gradient(135deg, #2A7CB8 0%, #0E3F66 100%); }
+  .p0-boat-thumb.t3 { background: linear-gradient(135deg, #3F8678 0%, #1A4F4A 100%); }
+  .p0-boat-thumb::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 30%;
+    background:
+      radial-gradient(ellipse at 30% 0, rgba(255,255,255,0.3), transparent 60%),
+      linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.4) 100%);
+  }
+  .p0-boat-thumb .rib {
+    position: absolute; top: 5px; left: 5px;
+    height: 16px; padding: 0 5px; border-radius: 3px;
+    background: #00BFD3; color: #fff;
+    display: inline-flex; align-items: center;
+    font-size: 8.5px; font-weight: 800; letter-spacing: -0.2px;
+  }
+  .p0-boat-thumb .rib::before {
+    content: ""; width: 4px; height: 4px; border-radius: 50%;
+    background: #fff; margin-right: 3px; animation: blink 1.2s infinite;
+  }
+  .p0-boat-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .p0-boat-name { font-size: 12.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px; }
+  .p0-boat-cap { font-size: 9.5px; color: #767676; font-weight: 600; }
+  .p0-boat-time {
+    display: flex; gap: 5px; align-items: center;
+    font-size: 10px; color: #363636; font-weight: 600; margin-top: 2px;
+  }
+  .p0-boat-time svg { color: #999; }
+  .p0-boat-species { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 3px; }
+  .p0-boat-species .sp {
+    font-size: 8.5px; font-weight: 700; color: #555;
+    background: #F3F3F3; padding: 2px 5px; border-radius: 3px;
+  }
+  .p0-boat-species .sp.hot { background: #FFE9E9; color: #FF4C14; }
+  .p0-boat-price { text-align: right; flex-shrink: 0; padding-top: 1px; }
+  .p0-boat-price .seats {
+    font-size: 8.5px; color: #1AAD4B; font-weight: 800; margin-bottom: 3px;
+    display: flex; align-items: center; gap: 3px; justify-content: flex-end;
+  }
+  .p0-boat-price .seats.tight { color: #FF4C14; }
+  .p0-boat-price .seats i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+  .p0-boat-price .won { font-size: 13px; font-weight: 900; color: #191919; letter-spacing: -0.3px; }
+  .p0-boat-price .won small { font-size: 9px; color: #767676; font-weight: 700; }
+  .p0-boat-price .strike { font-size: 9px; color: #AAA; text-decoration: line-through; font-weight: 600; }
+
+  .p0-card-foot {
+    padding: 9px 13px; display: flex; align-items: center; justify-content: space-between;
+    background: #FAFAFA;
+  }
+  .p0-card-foot .ft-tx { font-size: 9.5px; color: #767676; font-weight: 700; }
+  .p0-card-foot .more { font-size: 10px; color: #0041FF; font-weight: 800; }
+
+  /* mini auto-course preview */
+  .p0-course {
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 14px;
+    overflow: hidden; max-width: 296px;
+  }
+  .p0-course-head {
+    padding: 10px 13px;
+    background: linear-gradient(135deg, #EEEBFF 0%, #F5F2FE 60%, #FFFFFF 100%);
+    border-bottom: 1px solid #EEE;
+  }
+  .p0-course-head .tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 9px; font-weight: 800; color: #6433DF;
+  }
+  .p0-course-head .t {
+    font-size: 11.5px; font-weight: 800; color: #191919;
+    letter-spacing: -0.3px; margin-top: 2px;
+  }
+  .p0-course-head .t s { color: #888; font-weight: 600; text-decoration: line-through; text-decoration-color: #BBB; }
+  .p0-course-head .t b { color: #6433DF; }
+  .p0-course-head .ac {
+    display: flex; align-items: center; justify-content: space-between; margin-top: 8px;
+  }
+  .p0-course-head .ac .lbl { font-size: 9px; color: #555; font-weight: 700; }
+  .p0-course-head .ac .val { font-size: 11.5px; font-weight: 900; color: #0041FF; letter-spacing: -0.3px; }
+  .p0-course-head .ac .val .pc { font-size: 10px; font-weight: 800; }
+  .p0-course-head .bar { height: 3px; background: rgba(0,65,255,0.12); border-radius: 100px; margin-top: 4px; overflow: hidden; }
+  .p0-course-head .bar i { display: block; height: 100%; width: 89%; background: #0041FF; border-radius: 100px; }
+
+  .p0-course-tl { padding: 7px 13px 11px; }
+  .p0-tlr { display: flex; gap: 8px; padding: 4px 0; align-items: flex-start; }
+  .p0-tlt {
+    width: 32px; flex-shrink: 0; padding-top: 1px;
+    font-size: 9px; font-weight: 800; color: #6433DF; letter-spacing: -0.2px;
+  }
+  .p0-tld {
+    width: 10px; flex-shrink: 0; position: relative;
+    display: flex; flex-direction: column; align-items: center;
+    align-self: stretch;
+  }
+  .p0-tld .d {
+    width: 7px; height: 7px; border-radius: 50%; background: #6433DF;
+    margin-top: 4px; flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(100,51,223,0.18);
+  }
+  .p0-tld .ln {
+    width: 1.5px; flex: 1; background: #DCD3FB; margin-top: 2px;
+  }
+  .p0-tlr:last-child .p0-tld .ln { display: none; }
+  .p0-tlc { flex: 1; padding-bottom: 3px; }
+  .p0-tlcat {
+    display: inline-flex; font-size: 8.5px; font-weight: 800;
+    padding: 2px 5px; border-radius: 3px;
+    letter-spacing: -0.2px; margin-bottom: 1px;
+  }
+  .p0-tlcat.start { background: #191919; color: #fff; }
+  .p0-tlcat.food { background: #FFE9E9; color: #FF4C14; }
+  .p0-tlcat.cafe { background: #FFF6E0; color: #B87A00; }
+  .p0-tlcat.spot { background: #E7F8F0; color: #1AAD4B; }
+  .p0-tlcat.spa { background: #EEEBFF; color: #6433DF; }
+  .p0-tlp { font-size: 11.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px; line-height: 1.3; }
+  .p0-tlx { font-size: 9.5px; color: #767676; font-weight: 500; margin-top: 1px; line-height: 1.35; }
+
+  .p0-course-foot {
+    padding: 9px 13px; background: #FAFAFA;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .p0-course-foot .mt { font-size: 9.5px; color: #767676; font-weight: 700; }
+  .p0-course-foot .mt b { color: #191919; font-weight: 800; }
+  .p0-course-foot .add-btn {
+    font-size: 10px; font-weight: 800; color: #fff;
+    background: #6433DF; padding: 5px 9px; border-radius: 100px;
+  }
+
+  .p0-qr-row { display: flex; gap: 5px; flex-wrap: wrap; padding: 0 2px; }
+  .p0-qr {
+    height: 28px; padding: 0 11px; border-radius: 100px;
+    background: #FFFFFF; border: 1px solid #E0E0E0;
+    font-size: 11px; font-weight: 700; color: #363636;
+    display: inline-flex; align-items: center;
+  }
+  .p0-qr.primary { background: #191919; color: #fff; border-color: #191919; }
+
+  .p0-cta {
+    flex-shrink: 0;
+    border-top: 1px solid #EEEEEE; background: #fff;
+    padding: 11px 14px 8px;
+  }
+  .p0-cta-tx {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px;
+  }
+  .p0-cta-tx .l { font-size: 10px; color: #767676; font-weight: 700; }
+  .p0-cta-tx .l b { color: #191919; font-weight: 800; }
+  .p0-cta-tx .price { font-size: 15px; font-weight: 900; color: #0041FF; letter-spacing: -0.4px; }
+  .p0-cta-tx .price small { font-size: 10px; font-weight: 700; color: #767676; margin-left: 1px; }
+  .p0-cta-btn {
+    width: 100%; height: 46px; border-radius: 100px;
+    background: #0041FF; color: #fff;
+    font-size: 14px; font-weight: 800; letter-spacing: -0.3px;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    box-shadow: 0 6px 18px rgba(0,65,255,0.22);
+  }
+  .p0-cta-sub {
+    text-align: center; font-size: 9.5px; color: #767676; font-weight: 600;
+    margin-top: 5px;
+  }
+  .p0-cta-sub b { color: #1AAD4B; font-weight: 800; }
+
+  /* ====================================================================
+     PHONE 1 — 패키지빌더 (supplier console)
+     ==================================================================== */
+  .p1-body { flex: 1; overflow: hidden; padding: 0 0 4px; display: flex; flex-direction: column; gap: 12px; }
+  .p1-ctx {
+    margin: 4px 20px 0; padding: 10px 12px;
+    background: #F8F8F8; border-radius: 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .p1-ctx .av {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #191919; color: #FFC700;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; flex-shrink: 0;
+  }
+  .p1-ctx .nm { font-size: 12px; font-weight: 700; color: #191919; }
+  .p1-ctx .meta { font-size: 10.5px; color: #767676; font-weight: 600; margin-top: 1px; }
+  .p1-ctx .sku {
+    margin-left: auto; font-family: 'SF Mono', Menlo, monospace;
+    font-size: 10px; font-weight: 700; color: #FFC700; background: #191919;
+    padding: 4px 7px; border-radius: 4px; letter-spacing: 0;
+  }
+  .p1-prog {
+    margin: 0 20px;
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .p1-prog-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .p1-prog-top .tx { font-size: 12.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px; }
+  .p1-prog-top .tx s { color: #AAA; font-weight: 600; text-decoration: none; margin-left: 4px; }
+  .p1-prog-top .rt {
+    font-size: 10.5px; font-weight: 800; color: #0041FF;
+    background: #EEF8FF; padding: 3px 7px; border-radius: 4px;
+  }
+  .p1-prog-bar { height: 5px; background: #EEEEEE; border-radius: 100px; margin-top: 9px; overflow: hidden; display: flex; }
+  .p1-prog-bar i { display: block; height: 100%; background: #191919; }
+  .p1-prog-bar i.cur { background: #0041FF; }
+  .p1-prog-bar i.empty { background: #EEEEEE; }
+  .p1-prog-steps { display: flex; justify-content: space-between; margin-top: 8px; font-size: 9.5px; color: #999; font-weight: 700; }
+  .p1-prog-steps .on { color: #191919; }
+
+  .p1-section { margin: 0 20px; }
+  .p1-section-h {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .p1-section-h .t {
+    font-size: 12px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .p1-section-h .t .n {
+    width: 16px; height: 16px; border-radius: 50%; background: #191919; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 800;
+  }
+  .p1-section-h .m { font-size: 10px; color: #767676; font-weight: 600; }
+  .p1-section-h .m .live {
+    display: inline-flex; align-items: center; gap: 4px;
+    color: #1AAD4B; font-weight: 800;
+  }
+  .p1-section-h .m .live i {
+    width: 5px; height: 5px; border-radius: 50%; background: #1AAD4B;
+    display: inline-block; animation: blink 1.4s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+  .p1-canvas {
+    background: #F8F8F8; border-radius: 12px;
+    padding: 10px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .p1-mod {
+    background: #fff; border: 1px solid #EEEEEE; border-radius: 10px;
+    padding: 9px 11px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .p1-mod .grip { display: flex; flex-direction: column; gap: 2px; }
+  .p1-mod .grip i { display: block; width: 3px; height: 3px; border-radius: 50%; background: #CCC; }
+  .p1-mod .ico {
+    width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .p1-mod .ico.boat { background: #EEF8FF; color: #0041FF; }
+  .p1-mod .ico.stay { background: #EEEBFF; color: #6433DF; }
+  .p1-mod .ico.food { background: #FFE9E9; color: #FF4C14; }
+  .p1-mod .ico.rent { background: #FFF6D6; color: #B07A00; }
+  .p1-mod .body { flex: 1; min-width: 0; }
+  .p1-mod .cat { font-size: 9px; font-weight: 800; letter-spacing: 0.06em; color: #767676; text-transform: uppercase; }
+  .p1-mod .nm { font-size: 12px; font-weight: 800; color: #191919; letter-spacing: -0.3px; line-height: 1.25; margin-top: 1px; }
+  .p1-mod .meta { display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 10px; color: #666; font-weight: 600; }
+  .p1-mod .meta .stk {
+    display: inline-flex; align-items: center; gap: 3px;
+  }
+  .p1-mod .meta .stk i { width: 5px; height: 5px; border-radius: 50%; background: #1AAD4B; display: inline-block; animation: blink 1.4s infinite; }
+  .p1-mod .meta .stk.warn { color: #FF4C14; }
+  .p1-mod .meta .stk.warn i { background: #FF4C14; }
+  .p1-mod .pr { margin-left: auto; font-size: 11.5px; font-weight: 800; color: #191919; }
+  .p1-slot {
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    padding: 10px; border: 1.5px dashed #CCCCCC; border-radius: 10px;
+    background: #FFFFFF; color: #767676; font-size: 11px; font-weight: 700;
+  }
+
+  .p1-price {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .p1-pc {
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 10px;
+    padding: 9px 11px;
+  }
+  .p1-pc.base { background: #191919; border-color: #191919; }
+  .p1-pc .lbl { font-size: 10px; font-weight: 700; color: #767676; }
+  .p1-pc.base .lbl { color: #AAAAAA; }
+  .p1-pc .val { font-size: 13.5px; font-weight: 800; color: #191919; margin-top: 2px; letter-spacing: -0.3px; }
+  .p1-pc.base .val { color: #FFFFFF; }
+  .p1-pc .val .d { font-size: 10px; font-weight: 800; margin-left: 3px; }
+  .p1-pc .val .d.up { color: #FF4C14; }
+  .p1-pc .val .d.dn { color: #1AAD4B; }
+
+  .p1-shareline {
+    margin: 0 20px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; background: #FFF6D6; border-radius: 10px;
+  }
+  .p1-shareline .ic { color: #B07A00; flex-shrink: 0; }
+  .p1-shareline .tx { font-size: 11px; font-weight: 700; color: #5C4400; line-height: 1.4; }
+  .p1-shareline .tx b { font-weight: 800; }
+
+  .p1-cta-wrap { margin: 0 20px 4px; display: flex; flex-direction: column; gap: 6px; }
+  .p1-cta {
+    height: 48px; border-radius: 1000px; background: #0041FF; color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: -0.3px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .p1-cta-sub { text-align: center; font-size: 10px; color: #767676; font-weight: 600; }
+  .p1-cta-sub b { color: #191919; font-weight: 800; }
+
+  /* ====================================================================
+     PHONE 2 — AI 권역 추천 (consumer post-booking)
+     ==================================================================== */
+  .p2-body { flex: 1; overflow: hidden; display: flex; flex-direction: column; gap: 10px; padding: 0 0 4px; }
+  .p2-ctx {
+    margin: 0 20px;
+    display: flex; gap: 5px; flex-wrap: wrap;
+  }
+  .p2-ctx .chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10.5px; font-weight: 700; color: #363636;
+    background: #F8F8F8; padding: 5px 9px; border-radius: 100px;
+  }
+  .p2-ctx .chip.live {
+    background: #FFFFFF; border: 1px solid #1AAD4B; color: #1AAD4B;
+  }
+  .p2-ctx .chip.live i {
+    width: 5px; height: 5px; border-radius: 50%; background: #1AAD4B;
+  }
+
+  .p2-hero {
+    margin: 2px 20px 0; padding: 16px 16px 14px;
+    background: #F5F2FE; border-radius: 14px;
+    position: relative; overflow: hidden;
+  }
+  .p2-hero::after {
+    content: ""; position: absolute; right: -30px; top: -30px;
+    width: 110px; height: 110px; border-radius: 50%; background: rgba(100,51,223,0.06);
+  }
+  .p2-hero .tag {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 3px 8px; background: #6433DF; color: #fff;
+    border-radius: 100px; font-size: 9.5px; font-weight: 800; letter-spacing: 0.04em;
+  }
+  .p2-hero .hk {
+    font-size: 14px; font-weight: 700; color: #191919;
+    margin-top: 10px; letter-spacing: -0.4px; line-height: 1.4; position: relative;
+  }
+  .p2-hero .hk s { color: #999; font-weight: 500; text-decoration-color: #999; }
+  .p2-hero .hk b { color: #6433DF; font-weight: 800; }
+  .p2-hero .pipe {
+    margin-top: 12px;
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 10px; background: rgba(255,255,255,0.7);
+    border-radius: 8px; font-size: 10px; font-weight: 700; color: #6433DF;
+    position: relative;
+  }
+  .p2-hero .pipe .seg b { color: #191919; font-weight: 800; }
+  .p2-hero .pipe .arr { color: #B5A8E0; }
+
+  .p2-section-h {
+    margin: 0 20px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .p2-section-h .l {
+    font-size: 12px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .p2-section-h .l .tag {
+    display: inline-flex; align-items: center;
+    font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 3px;
+    background: #6433DF; color: #fff; letter-spacing: 0.02em;
+  }
+  .p2-section-h .r { font-size: 10.5px; color: #767676; font-weight: 600; }
+
+  .p2-tl { margin: 0 20px; position: relative; padding-left: 28px; }
+  .p2-tl::before {
+    content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px;
+    width: 2px; background: #EEEBFF; border-radius: 1px;
+  }
+  .p2-tlstep { position: relative; padding-bottom: 6px; }
+  .p2-tlstep + .p2-tlstep { margin-top: 6px; }
+  .p2-tlstep .node {
+    position: absolute; left: -27px; top: 7px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #FFFFFF; border: 2px solid #6433DF; color: #6433DF;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 800;
+  }
+  .p2-tlstep.start .node { background: #6433DF; color: #FFFFFF; }
+  .p2-tlstep.end .node { background: #191919; color: #FFC700; border-color: #191919; }
+  .p2-tlcard {
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 10px;
+    padding: 8px 11px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .p2-tlcard .tm {
+    font-size: 11.5px; font-weight: 800; color: #191919; letter-spacing: -0.3px;
+    flex-shrink: 0; width: 38px;
+  }
+  .p2-tlcard .nm { font-size: 12.5px; font-weight: 700; color: #191919; letter-spacing: -0.3px; line-height: 1.2; }
+  .p2-tlcard .meta { font-size: 10px; color: #767676; font-weight: 600; margin-top: 1px; display: flex; align-items: center; gap: 5px; }
+  .p2-tlcard .meta .cat {
+    display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 9px; font-weight: 800; letter-spacing: 0;
+  }
+  .p2-tlcard .meta .cat.food { background: #FFE9E9; color: #FF4C14; }
+  .p2-tlcard .meta .cat.cafe { background: #FFF6D6; color: #B07A00; }
+  .p2-tlcard .meta .cat.spot { background: #E7F8F0; color: #1AAD4B; }
+  .p2-tlcard .meta .cat.spa { background: #EEEBFF; color: #6433DF; }
+  .p2-tlcard .meta .cat.start { background: #191919; color: #FFC700; }
+  .p2-tlcard .kto {
+    margin-left: auto; flex-shrink: 0;
+    font-size: 9px; font-weight: 800; color: #0041FF;
+    background: #EEF8FF; padding: 2px 5px; border-radius: 3px;
+  }
+
+  .p2-kto-line {
+    margin: 0 20px;
+    display: flex; align-items: center; gap: 9px;
+    padding: 10px 12px; background: #F5F7FA;
+    border: 1px solid #EEEEEE; border-radius: 10px;
+  }
+  .p2-kto-line .lg {
+    width: 28px; height: 22px; border: 1px solid #DCE3EC; background: #fff;
+    border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 900; color: #0041FF; flex-shrink: 0;
+  }
+  .p2-kto-line .tx { font-size: 11px; font-weight: 700; color: #363636; line-height: 1.4; }
+  .p2-kto-line .tx b { color: #191919; }
+  .p2-kto-line .live { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; font-size: 9.5px; font-weight: 800; color: #1AAD4B; }
+  .p2-kto-line .live i { width: 5px; height: 5px; border-radius: 50%; background: #1AAD4B; animation: blink 1.4s infinite; }
+
+  .p2-cta-wrap { margin: 0 20px 4px; display: flex; flex-direction: column; gap: 5px; }
+  .p2-cta {
+    height: 48px; border-radius: 1000px; background: #0041FF; color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: -0.3px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .p2-cta-sub { text-align: center; font-size: 10px; color: #767676; font-weight: 600; }
+  .p2-cta-sub b { color: #6433DF; font-weight: 800; }
+
+  /* ====================================================================
+     PHONE 3 — Fishing Stay (curated marketplace)
+     ==================================================================== */
+  .p3-body { flex: 1; overflow: hidden; display: flex; flex-direction: column; gap: 12px; padding: 0 0 4px; }
+  .p3-hero {
+    margin: 0 20px; padding: 14px 16px;
+    background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 14px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .p3-hero .num {
+    display: flex; align-items: baseline; gap: 2px;
+    flex-shrink: 0;
+  }
+  .p3-hero .num .b {
+    font-size: 36px; font-weight: 800; color: #191919; letter-spacing: -1px; line-height: 1;
+  }
+  .p3-hero .num .s { font-size: 16px; font-weight: 700; color: #AAAAAA; }
+  .p3-hero .body { flex: 1; min-width: 0; }
+  .p3-hero .body .t1 {
+    font-size: 10.5px; font-weight: 800; color: #6433DF; letter-spacing: 0.06em;
+  }
+  .p3-hero .body .t2 {
+    font-size: 13px; font-weight: 800; color: #191919; letter-spacing: -0.3px; line-height: 1.35;
+    margin-top: 3px;
+  }
+  .p3-hero .body .t3 { font-size: 10.5px; color: #767676; font-weight: 600; margin-top: 3px; }
+
+  .p3-tabs {
+    margin: 0 20px; display: flex; background: #F3F3F3; border-radius: 100px; padding: 3px;
+  }
+  .p3-tabs .t {
+    flex: 1; text-align: center; font-size: 11.5px; font-weight: 700;
+    color: #767676; padding: 7px 0; border-radius: 100px;
+  }
+  .p3-tabs .t.on { background: #FFFFFF; color: #191919; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .p3-tabs .t.on.plus { background: #6433DF; color: #fff; }
+  .p3-tabs .t .n { font-size: 10px; font-weight: 700; opacity: 0.7; margin-left: 3px; }
+
+  .p3-card {
+    margin: 0 20px; background: #FFFFFF; border: 1px solid #EEEEEE;
+    border-radius: 14px; overflow: hidden;
+  }
+  .p3-card .img {
+    width: 100%; height: 140px;
+    background: linear-gradient(160deg, #2B4768 0%, #3D6492 60%, #5589BA 100%);
+    position: relative;
+  }
+  .p3-card .img svg.scene {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+  }
+  .p3-card .img .grade {
+    position: absolute; top: 10px; left: 10px;
+    font-size: 9.5px; font-weight: 800; padding: 4px 8px; border-radius: 4px;
+    letter-spacing: 0.04em;
+    background: #6433DF; color: #fff;
+  }
+  .p3-card .img .grade.basic { background: rgba(255,255,255,0.92); color: #363636; }
+  .p3-card .img .stamp {
+    position: absolute; bottom: 10px; left: 10px;
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 9.5px; font-weight: 700; color: #1AAD4B;
+    background: rgba(255,255,255,0.92); padding: 3px 7px; border-radius: 4px;
+  }
+  .p3-card .img .rank {
+    position: absolute; top: 10px; right: 10px;
+    font-size: 9.5px; font-weight: 700; color: #fff;
+    background: rgba(25,25,25,0.75); padding: 4px 8px; border-radius: 100px;
+    backdrop-filter: blur(2px);
+  }
+  .p3-card .body { padding: 11px 14px 12px; }
+  .p3-card .nm { font-size: 14.5px; font-weight: 800; color: #191919; letter-spacing: -0.4px; }
+  .p3-card .loc { font-size: 10.5px; color: #767676; font-weight: 600; margin-top: 2px; display: flex; gap: 5px; align-items: center; }
+  .p3-card .loc .dot { width: 2px; height: 2px; background: #AAAAAA; border-radius: 50%; display: inline-block; }
+  .p3-card .score {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 9px; padding: 7px 10px; background: #F8F8F8; border-radius: 8px;
+  }
+  .p3-card .score .bar { flex: 1; height: 4px; background: #E5E5E5; border-radius: 100px; overflow: hidden; }
+  .p3-card .score .bar .fill { height: 100%; background: #6433DF; border-radius: 100px; }
+  .p3-card .score .pt { font-size: 11px; font-weight: 800; color: #191919; }
+  .p3-card .score .pt s { color: #767676; font-weight: 600; text-decoration: none; }
+  .p3-card .feats { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .p3-card .feat { font-size: 9.5px; font-weight: 700; padding: 3px 7px; border-radius: 4px; background: #F8F8F8; color: #363636; }
+  .p3-card .feat.pur { background: #EEEBFF; color: #6433DF; }
+  .p3-card .price {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid #F1F1F1;
+  }
+  .p3-card .price .now { font-size: 15px; font-weight: 800; color: #191919; }
+  .p3-card .price .now .per { font-size: 10px; color: #767676; font-weight: 600; margin-left: 1px; }
+  .p3-card .price .orig { font-size: 10px; color: #AAAAAA; text-decoration: line-through; font-weight: 600; }
+  .p3-card .price .det {
+    font-size: 10.5px; font-weight: 800; color: #6433DF;
+    display: flex; align-items: center; gap: 3px;
+  }
+
+  .p3-checks {
+    margin: 0 20px;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px;
+  }
+  .p3-checks .it {
+    background: #F8F8F8; border-radius: 8px;
+    padding: 7px 4px 6px; text-align: center;
+  }
+  .p3-checks .it .ic { width: 18px; height: 18px; margin: 0 auto; color: #6433DF; }
+  .p3-checks .it .l { font-size: 8.5px; font-weight: 700; color: #363636; margin-top: 3px; line-height: 1.2; }
+  .p3-checks .it .p { font-size: 9px; font-weight: 800; color: #6433DF; margin-top: 1px; }
+
+  .p3-cta-wrap { margin: 0 20px 4px; display: flex; flex-direction: column; gap: 5px; }
+  .p3-cta {
+    height: 48px; border-radius: 1000px; background: #0041FF; color: #fff;
+    font-size: 14px; font-weight: 700; letter-spacing: -0.3px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .p3-cta-sub { text-align: center; font-size: 10px; color: #767676; font-weight: 600; }
+
+  /* ====================================================================
+     PHONE 4 — 정산 엔진 (supplier payout dashboard)
+     ==================================================================== */
+  .p4-body { flex: 1; overflow: hidden; display: flex; flex-direction: column; gap: 12px; padding: 0 0 4px; }
+  .p4-ctx {
+    margin: 0 20px; display: flex; gap: 5px; flex-wrap: wrap;
+  }
+  .p4-ctx .chip {
+    font-size: 10.5px; font-weight: 700; color: #363636;
+    background: #F8F8F8; padding: 5px 9px; border-radius: 100px;
+  }
+  .p4-ctx .chip.dark { background: #191919; color: #FFC700; display: inline-flex; align-items: center; gap: 5px; }
+  .p4-ctx .chip.dark i { width: 5px; height: 5px; background: #1AAD4B; border-radius: 50%; display: inline-block; }
+  .p4-hero {
+    margin: 0 20px; background: #191919; border-radius: 18px;
+    padding: 18px 18px 16px; position: relative; overflow: hidden;
+    color: #FFFFFF;
+  }
+  .p4-hero::after {
+    content: ""; position: absolute; right: -30px; top: -30px;
+    width: 130px; height: 130px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,199,0,0.18), transparent 70%);
+  }
+  .p4-hero .top {
+    display: flex; justify-content: space-between; align-items: center;
+    position: relative;
+  }
+  .p4-hero .m {
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .p4-hero .m .ml {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #FFC700; color: #191919;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; letter-spacing: -0.4px;
+  }
+  .p4-hero .m .mt {
+    font-size: 10px; font-weight: 800; color: #FFC700; letter-spacing: 0.06em;
+  }
+  .p4-hero .dday {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 9px; border-radius: 100px;
+    background: rgba(255,199,0,0.16); border: 1px solid rgba(255,199,0,0.35);
+    font-size: 10px; font-weight: 800; color: #FFC700; letter-spacing: -0.3px;
+  }
+  .p4-hero .dday i { width: 5px; height: 5px; border-radius: 50%; background: #FFC700; }
+  .p4-hero .lb { font-size: 11px; font-weight: 600; color: #AAAAAA; margin-top: 16px; }
+  .p4-hero .amt {
+    font-size: 34px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.8px;
+    margin-top: 2px; line-height: 1.1; position: relative;
+  }
+  .p4-hero .amt .w { color: #FFC700; font-size: 28px; margin-right: 1px; }
+  .p4-hero .sub { font-size: 10.5px; font-weight: 600; color: #767676; margin-top: 4px; }
+  .p4-hero .pills { display: flex; gap: 7px; margin-top: 14px; position: relative; }
+  .p4-hero .pill {
+    flex: 1; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 8px 10px;
+  }
+  .p4-hero .pill .lbl { font-size: 9.5px; font-weight: 600; color: #767676; display: flex; align-items: center; gap: 4px; }
+  .p4-hero .pill .lbl i { width: 5px; height: 5px; border-radius: 2px; display: inline-block; }
+  .p4-hero .pill .v { font-size: 12.5px; font-weight: 800; color: #FFFFFF; margin-top: 3px; letter-spacing: -0.3px; }
+
+  .p4-kpi { margin: 0 20px; display: flex; gap: 6px; }
+  .p4-kpi .k {
+    flex: 1; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 10px;
+    padding: 9px 10px;
+  }
+  .p4-kpi .k .l { font-size: 9.5px; color: #767676; font-weight: 600; }
+  .p4-kpi .k .v { font-size: 15px; font-weight: 800; color: #191919; margin-top: 3px; letter-spacing: -0.4px; line-height: 1; }
+  .p4-kpi .k .v .u { font-size: 10px; font-weight: 700; color: #363636; margin-left: 1px; }
+  .p4-kpi .k .d { font-size: 9.5px; font-weight: 700; margin-top: 4px; }
+  .p4-kpi .k .d.up { color: #1AAD4B; }
+  .p4-kpi .k .d.tgt { color: #767676; }
+  .p4-kpi .k .d.gold { color: #B07A00; }
+
+  .p4-deal {
+    margin: 0 20px; background: #FFFFFF; border: 1px solid #EEEEEE;
+    border-radius: 12px; padding: 12px 12px 12px;
+  }
+  .p4-deal .top { display: flex; justify-content: space-between; align-items: center; }
+  .p4-deal .pkg { font-size: 9.5px; font-weight: 700; color: #767676; letter-spacing: 0.02em; }
+  .p4-deal .dd { padding: 2px 7px; border-radius: 4px; font-size: 9.5px; font-weight: 800; }
+  .p4-deal .dd.warn { background: #FFF1F1; color: #FF4C14; }
+  .p4-deal .nm { font-size: 13px; font-weight: 800; color: #191919; letter-spacing: -0.3px; margin-top: 3px; }
+  .p4-deal .meta { font-size: 10px; color: #767676; font-weight: 600; margin-top: 2px; }
+  .p4-deal .amt {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-top: 9px; padding-top: 9px; border-top: 1px dashed #EEEEEE;
+  }
+  .p4-deal .amt .l { font-size: 10.5px; color: #363636; font-weight: 600; }
+  .p4-deal .amt .v { font-size: 16px; font-weight: 800; color: #191919; letter-spacing: -0.4px; }
+  .p4-deal .stack { display: flex; height: 12px; border-radius: 6px; overflow: hidden; margin-top: 9px; }
+  .p4-deal .stack > div { display: flex; align-items: center; justify-content: center; font-size: 8.5px; font-weight: 800; color: #fff; }
+  .p4-deal .lg {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; margin-top: 8px;
+  }
+  .p4-deal .lg .row { display: flex; align-items: center; justify-content: space-between; }
+  .p4-deal .lg .row .l { display: flex; align-items: center; gap: 5px; }
+  .p4-deal .lg .row .sq { width: 7px; height: 7px; border-radius: 2px; }
+  .p4-deal .lg .row .nm2 { font-size: 10.5px; font-weight: 700; color: #363636; }
+  .p4-deal .lg .row .pct { font-size: 9.5px; font-weight: 700; color: #767676; }
+  .p4-deal .lg .row .am { font-size: 10.5px; font-weight: 800; color: #191919; }
+  .p4-deal .st {
+    display: flex; align-items: center; gap: 6px;
+    margin-top: 9px; padding: 7px 9px; background: #E7F8F0; border-radius: 8px;
+    font-size: 10.5px; font-weight: 700; color: #1AAD4B;
+  }
+  .p4-deal .st svg { flex-shrink: 0; }
+
+  .p4-law {
+    margin: 0 20px; padding: 11px 13px; background: #FFFAEB;
+    border: 1px solid #FFE9A0; border-radius: 10px;
+    display: flex; gap: 9px; align-items: center;
+  }
+  .p4-law .ic {
+    width: 24px; height: 24px; border-radius: 6px;
+    background: #FFC700; color: #191919;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .p4-law .tx { font-size: 10.5px; font-weight: 700; color: #5C4400; line-height: 1.45; }
+  .p4-law .tx b { color: #191919; font-weight: 800; }
+  .p4-law .tg { font-size: 9.5px; font-weight: 800; color: #B07A00; letter-spacing: 0.04em; display: block; margin-bottom: 2px; }
+
+  .p4-cta-wrap { margin: 0 20px 4px; display: flex; gap: 6px; }
+  .p4-cta-sec {
+    flex: 1; height: 44px; border-radius: 1000px;
+    background: #FFFFFF; border: 1px solid #E0E0E0; color: #363636;
+    font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 5px;
+  }
+  .p4-cta-pri {
+    flex: 1.4; height: 44px; border-radius: 1000px;
+    background: #0041FF; color: #fff;
+    font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 5px;
+  }
+
+  /* ============== FOOTER SUMMARY ============== */
+  .summary {
+    max-width: 1880px; margin: 48px auto 0;
+    background: #191919; border-radius: 20px;
+    padding: 28px 32px;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 24px; align-items: center;
+  }
+  .summary .l h3 { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.6px; line-height: 1.35; }
+  .summary .l h3 b { color: #FFC700; }
+  .summary .l p { font-size: 12px; color: #AAAAAA; margin-top: 8px; line-height: 1.6; max-width: 760px; }
+  .summary .r {
+    display: grid; grid-template-columns: repeat(4, auto); gap: 20px;
+  }
+  .summary .r .it {
+    display: flex; flex-direction: column;
+    padding: 0 16px; border-left: 1px solid rgba(255,255,255,0.12);
+  }
+  .summary .r .it:first-child { border-left: 0; padding-left: 0; }
+  .summary .r .it .v {
+    font-size: 22px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.5px; line-height: 1;
+  }
+  .summary .r .it .v .u { font-size: 13px; color: #FFC700; font-weight: 700; margin-left: 2px; }
+  .summary .r .it .l { font-size: 11px; color: #767676; font-weight: 600; margin-top: 6px; }
+
+</style>
+
+</head>
+<body>
+
+<div class="page" data-screen-label="01 제안서 대표 앱 화면 v4">
+
+  <!-- ====================== HEADER ====================== -->
+  <header class="page-head">
+    <div>
+      <div class="ph-eyebrow"><b>한국관광공사 OpenAPI 활용 사업</b> · 본 사업 5개월 산출물 v1</div>
+      <h1>어바웃피싱<span class="dot">.</span> X <span class="em">한국관광공사 TourAPI</span><br>"이번 주말 청사포 배낚시 예약할래?" 한 문장이 작동시키는 4개 기능</h1>
+      <p>회원이 챗봇에 한 줄만 입력하면 — 미리 공급자가 <b>만들어 둔 SKU(F1)</b>가 매칭되고, AI가 출조 직후 <b>5단계 권역 코스(F2)</b>를 자동 제안하며, 1박이 필요하면 <b>Fishing Stay 매칭(F3)</b>으로 연결, 결제 한 번이면 <b>5개 공급자에 7일 안에 자동 분배(F4)</b>됩니다. 모두 한 번의 대화 안에서 일어납니다.</p>
+    </div>
+    <div class="meta-strip">
+      <div class="ms accent"><b>5개월</b>협약 산출물</div>
+      <div class="div"></div>
+      <div class="ms"><b>4개</b>신규 기능</div>
+      <div class="div"></div>
+      <div class="ms"><b>30개</b>SKU 출시</div>
+      <div class="div"></div>
+      <div class="ms"><b>7일</b>정산 SLA</div>
+      <div class="div"></div>
+      <div class="ms"><b>25.1만</b>회원 즉시 노출</div>
+    </div>
+  </header>
+
+  <!-- ====================== USER JOURNEY ====================== -->
+  <section class="journey" data-screen-label="User Journey">
+    <div class="journey-head">
+      <h2><span class="tag">USER JOURNEY</span>한 줄 질문 → 4개 기능 동시 작동</h2>
+      <div class="legend">
+        <span><i style="background:#191919"></i>B2B 공급자 도구</span>
+        <span><i style="background:#EEEBFF"></i>B2C 회원 화면</span>
+        <span><i style="background:#F5F7FA;border:1px solid #DCE3EC"></i>한국관광공사 TourAPI 연동 지점</span>
+      </div>
+    </div>
+    <div class="journey-flow">
+      <div class="jstep f0">
+        <div class="jstep-h">
+          <div class="jstep-fid">F0</div>
+          <div class="jstep-type">B2C 진입</div>
+        </div>
+        <div class="jstep-title">AI 챗봇 한 줄 입력</div>
+        <div class="jstep-desc">"이번 주말 청사포 배낚시 예약할래?" 한 문장만 입력. AI가 지역·날짜·시즌 어종·예산을 동시에 파싱.</div>
+        <div class="jstep-actor">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          회원 · <b>송지영 가족</b>
+        </div>
+      </div>
+
+      <div class="jarrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </div>
+
+      <div class="jstep f1">
+        <div class="jstep-h">
+          <div class="jstep-fid">F1</div>
+          <div class="jstep-type">B2B</div>
+        </div>
+        <div class="jstep-title">패키지빌더</div>
+        <div class="jstep-desc">권역 공급자가 옵션을 끌어다 놓아 1박+ SKU를 60초 만에 발행. 재고·가격 룰 실시간 연동.</div>
+        <div class="jstep-actor">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          공급자 · <b>김명석 선장</b>
+        </div>
+      </div>
+
+      <div class="jarrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </div>
+
+      <div class="jstep f2">
+        <div class="jstep-h">
+          <div class="jstep-fid">F2</div>
+          <div class="jstep-type">B2C</div>
+        </div>
+        <div class="jstep-title">AI 권역 코스</div>
+        <div class="jstep-desc">출조 예약 즉시 AI가 식당→카페→관광지→온천 5단계 코스를 자동 구성. 기상 시 실내 자원으로 대안 모드.</div>
+        <div class="jstep-actor">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          회원 · <b>송지영 가족</b>
+        </div>
+      </div>
+
+      <div class="jarrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </div>
+
+      <div class="jstep f3">
+        <div class="jstep-h">
+          <div class="jstep-fid">F3</div>
+          <div class="jstep-type">B2C</div>
+        </div>
+        <div class="jstep-title">Fishing Stay</div>
+        <div class="jstep-desc">50개 표준 통과한 숙소 30곳. 새벽 체크인·장비 세척실·부두 거리 등 일반 OTA가 다루지 않는 기준.</div>
+        <div class="jstep-actor">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          회원 · <b>송지영 가족</b>
+        </div>
+      </div>
+
+      <div class="jarrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </div>
+
+      <div class="jstep f4">
+        <div class="jstep-h">
+          <div class="jstep-fid">F4</div>
+          <div class="jstep-type">B2B</div>
+        </div>
+        <div class="jstep-title">자동 정산</div>
+        <div class="jstep-desc">한 거래 복수 공급자에게 7일 안에 자동 분배. 세금계산서·현금영수증 100% 자동 발행으로 세무 0 터치.</div>
+        <div class="jstep-actor">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          공급자 · <b>청사포 베이 스테이</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== 5 PHONES ====================== -->
+  <div class="phones">
+
+    <!-- ============================================================
+         PHONE 0 — AI 챗봇 (entry point)
+         ============================================================ -->
+    <div class="phone-wrap">
+      <div class="lc f0">
+        <div class="lc-head">
+          <div class="lc-fid">F0</div>
+          <div class="lc-type">B2C · 진입 화면</div>
+        </div>
+        <div class="lc-h">
+          <div class="lc-title">AI 챗봇 한 줄 진입</div>
+          <div class="lc-sub">회원이 한 문장만 입력 → AI가 4개 기능을 동시 호출</div>
+        </div>
+        <div class="lc-kpis">
+          <div class="lc-kpi">
+            <div class="v">1<span class="u">문장</span></div>
+            <div class="l">사용자 입력</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">4<span class="u">초</span></div>
+            <div class="l">AI 매칭 분석</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">132<span class="u">곳</span></div>
+            <div class="l">POI 후보 풀</div>
+          </div>
+        </div>
+        <div class="lc-kto">
+          <div class="kto-tag">KTO</div>
+          <div class="kto-tx">한 문장에서 <b>지역·시즌·일행</b>을 동시 파싱해 TourAPI에 질의</div>
+        </div>
+      </div>
+
+      <div class="device">
+        <div class="dyn-island"></div>
+        <div class="phone" data-screen-label="01 AI 챗봇 진입 화면">
+
+          <div class="sb">
+            <span>9:41</span>
+            <div class="sb-r">
+              <svg width="17" height="11" viewBox="0 0 17 11" fill="#191919"><rect x="0" y="7" width="3" height="4" rx="0.5"></rect><rect x="4" y="5" width="3" height="6" rx="0.5"></rect><rect x="8" y="3" width="3" height="8" rx="0.5"></rect><rect x="12" y="0" width="3" height="11" rx="0.5"></rect></svg>
+              <svg width="14" height="11" viewBox="0 0 14 11" fill="#191919"><path d="M7 1.5 C 4 1.5, 2 3, 0.5 4.5 L 1.5 5.5 C 2.7 4.3, 4.7 3, 7 3 S 11.3 4.3, 12.5 5.5 L 13.5 4.5 C 12 3, 10 1.5, 7 1.5 Z"></path><path d="M7 6.5 C 5.5 6.5, 4.5 7, 3.5 8 L 4.5 9 C 5.2 8.3, 6 8, 7 8 S 8.8 8.3, 9.5 9 L 10.5 8 C 9.5 7, 8.5 6.5, 7 6.5 Z"></path><circle cx="7" cy="10" r="1"></circle></svg>
+              <svg width="25" height="11" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#191919" fill="none"></rect><rect x="2" y="2" width="18" height="7" rx="1" fill="#191919"></rect><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.5" fill="#191919"></rect></svg>
+            </div>
+          </div>
+
+          <div class="p0-chat-head">
+            <button class="back" aria-label="back">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="who">
+              <div class="ai-av">AF</div>
+              <div>
+                <div class="name">어바웃피싱 AI<span class="dot">.</span></div>
+                <div class="status">권역 패키지 어시스턴트</div>
+              </div>
+            </div>
+            <button class="more" aria-label="more">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>
+            </button>
+          </div>
+
+          <div class="p0-body">
+
+            <div class="p0-day"><span>5월 21일 (목) · 오후 8:12</span></div>
+
+            <div class="p0-ai-row">
+              <div class="p0-av-sm">AF</div>
+              <div class="p0-bubble in">안녕하세요! 출조부터 일정까지 한 번에 짜드릴게요.<br/><b>지금 5월은 청사포 갑오징어 피크</b>예요.</div>
+            </div>
+
+            <div class="p0-user-row">
+              <div class="p0-bubble user">이번 주말 청사포 배낚시 예약할래?</div>
+            </div>
+            <div class="p0-user-time">오후 8:12 · 읽음</div>
+
+            <div class="p0-ai-row">
+              <div class="p0-av-sm">AF</div>
+              <div class="p0-ai-col">
+                <div class="p0-ai-meta">
+                  <span>TourAPI 매칭</span>
+                  <span class="d"></span>
+                  <span><b>4초</b> 분석</span>
+                  <span class="d"></span>
+                  <span>POI 132곳 → <b>3척</b> 선별</span>
+                </div>
+                <div class="p0-bubble in">
+                  <b>토요일 청사포항 출항</b> 기준 3척 골랐어요. 일행 <b>성인 2 · 초보 포함</b> 프로필에 맞춰 갑오징어 좌석부터 정렬했어요.
+                </div>
+
+                <div class="p0-card">
+                  <div class="p0-card-head">
+                    <div class="tg"><span class="tg-dot"></span>AI 매칭 89%</div>
+                    <div class="picks"><b>3</b>척 추천</div>
+                  </div>
+                  <div class="p0-region">
+                    <div class="map-ic">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    </div>
+                    <div>
+                      <div class="where"><span class="pin">●</span> 청사포항 · 부산 해운대구</div>
+                      <div class="when">2026.05.23 토 · 04:30~05:00 출항</div>
+                    </div>
+                  </div>
+
+                  <div class="p0-boats">
+                    <div class="p0-boat sel">
+                      <div class="p0-boat-thumb">
+                        <span class="rib">LIVE</span>
+                      </div>
+                      <div class="p0-boat-body">
+                        <div class="p0-boat-name">청해호 · 김명석 선장</div>
+                        <div class="p0-boat-cap">청사포항 7호 부두 · 14인승</div>
+                        <div class="p0-boat-time">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                          05:00 출항 · 6시간
+                        </div>
+                        <div class="p0-boat-species">
+                          <span class="sp hot">● 갑오징어</span>
+                          <span class="sp">가자미</span>
+                          <span class="sp">우럭</span>
+                        </div>
+                      </div>
+                      <div class="p0-boat-price">
+                        <div class="seats tight"><i></i>4석</div>
+                        <div class="strike">₩125,000</div>
+                        <div class="won">₩105,000<small> /인</small></div>
+                      </div>
+                    </div>
+
+                    <div class="p0-boat">
+                      <div class="p0-boat-thumb t2"></div>
+                      <div class="p0-boat-body">
+                        <div class="p0-boat-name">푸른돌고래호 · 박재석 선장</div>
+                        <div class="p0-boat-cap">청사포항 3호 부두 · 20인승</div>
+                        <div class="p0-boat-time">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                          04:30 출항 · 8시간 원거리
+                        </div>
+                        <div class="p0-boat-species">
+                          <span class="sp hot">● 갑오징어</span>
+                          <span class="sp">광어</span>
+                        </div>
+                      </div>
+                      <div class="p0-boat-price">
+                        <div class="seats"><i></i>7석</div>
+                        <div class="won">₩135,000<small> /인</small></div>
+                      </div>
+                    </div>
+
+                    <div class="p0-boat">
+                      <div class="p0-boat-thumb t3"></div>
+                      <div class="p0-boat-body">
+                        <div class="p0-boat-name">해운대수산호 · 정형우 선장</div>
+                        <div class="p0-boat-cap">청사포항 5호 부두 · 12인승</div>
+                        <div class="p0-boat-time">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                          05:00 출항 · 일요일
+                        </div>
+                        <div class="p0-boat-species">
+                          <span class="sp">갑오징어</span>
+                          <span class="sp">초보 OK</span>
+                        </div>
+                      </div>
+                      <div class="p0-boat-price">
+                        <div class="seats"><i></i>9석</div>
+                        <div class="won">₩95,000<small> /인</small></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p0-card-foot">
+                    <span class="ft-tx">F1 빌더 SKU 자동 매칭</span>
+                    <span class="more">전체 12척 ›</span>
+                  </div>
+                </div>
+
+                <div class="p0-bubble in">
+                  <b>청해호</b>로 골랐어요. 11시 입항 후 <b>오후 5시간</b>이 비어요 — 권역 코스도 짜드릴까요?
+                </div>
+
+                <div class="p0-course">
+                  <div class="p0-course-head">
+                    <div class="tag">
+                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                      F2 AI 권역 코스
+                    </div>
+                    <div class="t"><s>낚시 끝나고 뭐하지?</s> — <b>결말 5단계</b></div>
+                    <div class="ac">
+                      <span class="lbl">부산 권역 POI 48곳</span>
+                      <span class="val">87<span class="pc">%</span></span>
+                    </div>
+                    <div class="bar"><i></i></div>
+                  </div>
+
+                  <div class="p0-course-tl">
+                    <div class="p0-tlr">
+                      <div class="p0-tlt">11:00</div>
+                      <div class="p0-tld"><span class="d" style="background:#191919; box-shadow:0 0 0 2px rgba(25,25,25,0.18);"></span><span class="ln"></span></div>
+                      <div class="p0-tlc">
+                        <span class="p0-tlcat start">입항</span>
+                        <div class="p0-tlp">청사포항</div>
+                      </div>
+                    </div>
+                    <div class="p0-tlr">
+                      <div class="p0-tlt">12:00</div>
+                      <div class="p0-tld"><span class="d"></span><span class="ln"></span></div>
+                      <div class="p0-tlc">
+                        <span class="p0-tlcat food">미식</span>
+                        <div class="p0-tlp">해운대 자갈치회센터</div>
+                        <div class="p0-tlx">갑오징어 회 · 일행 적합 94%</div>
+                      </div>
+                    </div>
+                    <div class="p0-tlr">
+                      <div class="p0-tlt">13:30</div>
+                      <div class="p0-tld"><span class="d" style="background:#B87A00;"></span><span class="ln"></span></div>
+                      <div class="p0-tlc">
+                        <span class="p0-tlcat cafe">카페</span>
+                        <div class="p0-tlp">청사포 다릿돌전망대</div>
+                      </div>
+                    </div>
+                    <div class="p0-tlr">
+                      <div class="p0-tlt">14:30</div>
+                      <div class="p0-tld"><span class="d" style="background:#1AAD4B;"></span><span class="ln"></span></div>
+                      <div class="p0-tlc">
+                        <span class="p0-tlcat spot">관광</span>
+                        <div class="p0-tlp">해운대 블루라인파크</div>
+                        <div class="p0-tlx">청사포↔미포 해변열차</div>
+                      </div>
+                    </div>
+                    <div class="p0-tlr">
+                      <div class="p0-tlt">16:30</div>
+                      <div class="p0-tld"><span class="d" style="background:#6433DF;"></span></div>
+                      <div class="p0-tlc">
+                        <span class="p0-tlcat spa">온천</span>
+                        <div class="p0-tlp">해운대 스파랜드 센텀</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p0-course-foot">
+                    <div class="mt">총 <b>27.3km</b> · 1h 14m</div>
+                    <button class="add-btn">코스 담기</button>
+                  </div>
+                </div>
+
+                <div class="p0-qr-row">
+                  <button class="p0-qr primary">예 코스도 같이</button>
+                  <button class="p0-qr">출조만 예약</button>
+                  <button class="p0-qr">다른 선박</button>
+                </div>
+
+                <div class="p0-ai-meta">
+                  <span>● 결제 1회 → 5개 공급자 자동 분배</span>
+                  <span class="d"></span>
+                  <span>F4 정산</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p0-cta">
+            <div class="p0-cta-tx">
+              <div class="l"><b>청해호</b> · 5/23 토 · 2인 · 코스 포함</div>
+              <div class="price">₩285,000<small>합계</small></div>
+            </div>
+            <button class="p0-cta-btn">
+              예약 확정하기
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <div class="p0-cta-sub">결제 즉시 <b>5개 공급자 자동 분배</b> · 세금계산서 100% 자동</div>
+            <div style="width:120px; height:4px; border-radius:2px; background:#191919; margin: 8px auto 0;"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="phone-cap">
+        <div class="cap-t">AI 챗봇 진입</div>
+        <div class="cap-d">한 문장으로 4기능 동시 작동</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PHONE 1 — 패키지빌더
+         ============================================================ -->
+    <div class="phone-wrap">
+      <!-- label card -->
+      <div class="lc f1">
+        <div class="lc-head">
+          <div class="lc-fid">F1</div>
+          <div class="lc-type">B2B · 공급자 콘솔</div>
+        </div>
+        <div class="lc-h">
+          <div class="lc-title">패키지빌더</div>
+          <div class="lc-sub">권역 공급자가 옵션을 끌어다 놓아 1박+ SKU를 직접 발행하는 노코드 도구</div>
+        </div>
+        <div class="lc-kpis">
+          <div class="lc-kpi">
+            <div class="v">30<span class="u">개</span></div>
+            <div class="l">SKU 출시 목표</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">60<span class="u">초</span></div>
+            <div class="l">발행 소요</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">5<span class="u">권역</span></div>
+            <div class="l">분산 운영</div>
+          </div>
+        </div>
+        <div class="lc-kto">
+          <div class="kto-tag">KTO</div>
+          <div class="kto-tx"><b>TourAPI POI</b>를 옵션 모듈로 끌어와 패키지 구성</div>
+        </div>
+      </div>
+
+      <!-- phone -->
+      <div class="device">
+        <div class="dyn-island"></div>
+      <div class="phone" data-screen-label="02 패키지빌더 화면">
+        <div class="sb">
+          <span>9:41</span>
+          <div class="sb-r">
+            <svg width="17" height="11" viewBox="0 0 17 11" fill="#191919"><rect x="0" y="7" width="3" height="4" rx="0.5"></rect><rect x="4" y="5" width="3" height="6" rx="0.5"></rect><rect x="8" y="3" width="3" height="8" rx="0.5"></rect><rect x="12" y="0" width="3" height="11" rx="0.5"></rect></svg>
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="#191919"><path d="M7 1.5 C 4 1.5, 2 3, 0.5 4.5 L 1.5 5.5 C 2.7 4.3, 4.7 3, 7 3 S 11.3 4.3, 12.5 5.5 L 13.5 4.5 C 12 3, 10 1.5, 7 1.5 Z"></path><path d="M7 6.5 C 5.5 6.5, 4.5 7, 3.5 8 L 4.5 9 C 5.2 8.3, 6 8, 7 8 S 8.8 8.3, 9.5 9 L 10.5 8 C 9.5 7, 8.5 6.5, 7 6.5 Z"></path><circle cx="7" cy="10" r="1"></circle></svg>
+            <svg width="25" height="11" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#191919" fill="none"></rect><rect x="2" y="2" width="18" height="7" rx="1" fill="#191919"></rect><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.5" fill="#191919"></rect></svg>
+          </div>
+        </div>
+
+        <div class="ah">
+          <div class="ah-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+            <div class="ah-title">패키지빌더<span class="dot">.</span></div>
+          </div>
+          <div class="ah-r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path></svg>
+          </div>
+        </div>
+
+        <div class="p1-body">
+          <div class="p1-ctx">
+            <div class="av">선</div>
+            <div>
+              <div class="nm">청사포피싱투어 · 김명석 선장</div>
+              <div class="meta">청사포 권역 · 청사포 운항 8년차 · 어바웃피싱 2년차</div>
+            </div>
+            <div class="sku">SKU-AF-CSP-014</div>
+          </div>
+
+          <div class="p1-prog">
+            <div class="p1-prog-top">
+              <div class="tx">청사포 1박2일 갑오징어 풀코스 <s>· DRAFT</s></div>
+              <div class="rt">4 / 6 단계</div>
+            </div>
+            <div class="p1-prog-bar">
+              <i style="flex:1"></i><i style="flex:1"></i><i style="flex:1"></i><i class="cur" style="flex:1"></i><i class="empty" style="flex:1"></i><i class="empty" style="flex:1"></i>
+            </div>
+          </div>
+
+          <div class="p1-section">
+            <div class="p1-section-h">
+              <div class="t"><span class="n">2</span>패키지 캔버스 · 4개 모듈</div>
+              <div class="m"><span class="live"><i></i>재고 실시간</span></div>
+            </div>
+            <div class="p1-canvas">
+              <div class="p1-mod">
+                <div class="grip"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="ico boat">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1.5 3h15L21 17"></path><path d="M5 14l7-9 7 9"></path><path d="M9 14h6"></path></svg>
+                </div>
+                <div class="body">
+                  <div class="cat">출조</div>
+                  <div class="nm">청사포항 새벽 04:30 출항</div>
+                  <div class="meta"><span class="stk"><i></i>9/16 좌석</span></div>
+                </div>
+                <div class="pr">89,000</div>
+              </div>
+              <div class="p1-mod">
+                <div class="grip"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="ico stay">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11"></path><path d="M9 21v-7h6v7"></path></svg>
+                </div>
+                <div class="body">
+                  <div class="cat">숙박 · Fishing Stay Plus</div>
+                  <div class="nm">바다뷰 펜션 디럭스</div>
+                  <div class="meta"><span class="stk"><i></i>잔여 4실</span></div>
+                </div>
+                <div class="pr">140,000</div>
+              </div>
+              <div class="p1-mod">
+                <div class="grip"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="ico food">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-3 4-6 9-6s9 3 9 6"></path><path d="M2 12h20l-2 7H4z"></path></svg>
+                </div>
+                <div class="body">
+                  <div class="cat">식음 · 권역 미식</div>
+                  <div class="nm">해운대 갑오징어 회 풀코스</div>
+                  <div class="meta"><span class="stk warn"><i></i>잔여 2테이블 · 마감임박</span></div>
+                </div>
+                <div class="pr">56,000</div>
+              </div>
+              <div class="p1-mod">
+                <div class="grip"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="ico rent">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v4H4z"></path><path d="M6 11v9h12v-9"></path><path d="M10 7V4h4v3"></path></svg>
+                </div>
+                <div class="body">
+                  <div class="cat">렌탈</div>
+                  <div class="nm">루어풀세트 + 구명조끼</div>
+                  <div class="meta"><span class="stk"><i></i>잔여 12세트</span></div>
+                </div>
+                <div class="pr">18,000</div>
+              </div>
+              <div class="p1-slot">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+                특산물 / 보험 / 체험 끌어 넣기
+              </div>
+            </div>
+          </div>
+
+          <div class="p1-section">
+            <div class="p1-section-h">
+              <div class="t"><span class="n">4</span>다이내믹 가격 룰</div>
+              <div class="m">자동 적용</div>
+            </div>
+            <div class="p1-price">
+              <div class="p1-pc base">
+                <div class="lbl">평일 기준가</div>
+                <div class="val">₩303,000</div>
+              </div>
+              <div class="p1-pc">
+                <div class="lbl">주말</div>
+                <div class="val">₩339,000<span class="d up">+12%</span></div>
+              </div>
+              <div class="p1-pc">
+                <div class="lbl">성수기</div>
+                <div class="val">₩378,750<span class="d up">+25%</span></div>
+              </div>
+              <div class="p1-pc">
+                <div class="lbl">동반자/인</div>
+                <div class="val">₩278,760<span class="d dn">-8%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p1-shareline">
+            <div class="ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"></path></svg>
+            </div>
+            <div class="tx">발행 즉시 <b>정산 엔진(F4)</b> 자동 연동 — 선장 35% · 숙박 30% · 식음 25% · 렌탈 10%</div>
+          </div>
+
+          <div class="p1-cta-wrap">
+            <button class="p1-cta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"></path></svg>
+              패키지 발행하기
+            </button>
+            <div class="p1-cta-sub">발행 즉시 회원 <b>25.1만 명</b> 홈피드 노출 · 평균 검수 <b>8분</b></div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1z"></path></svg>홈</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>커뮤니티</div>
+          <div class="t on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>예약</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4M3 17l9 4 9-4"></path></svg>중고장터</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><path d="M3 6h18M16 10a4 4 0 01-8 0"></path></svg>쇼핑</div>
+        </div>
+      </div>
+      </div>
+      <div class="phone-cap">
+        <div class="cap-t">공급자 빌더 콘솔</div>
+        <div class="cap-d">청해호 SKU 발행 직전</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PHONE 2 — AI 권역 추천
+         ============================================================ -->
+    <div class="phone-wrap">
+      <div class="lc f2">
+        <div class="lc-head">
+          <div class="lc-fid">F2</div>
+          <div class="lc-type">B2C · 회원 화면</div>
+        </div>
+        <div class="lc-h">
+          <div class="lc-title">AI 권역 관광 추천</div>
+          <div class="lc-sub">출조 예약 즉시 식당→카페→관광지→온천 5단계 코스 자동 구성</div>
+        </div>
+        <div class="lc-kpis">
+          <div class="lc-kpi">
+            <div class="v">5<span class="u">건</span></div>
+            <div class="l">매칭 알고리즘 특허</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">15.2<span class="u">만</span></div>
+            <div class="l">행동 데이터 학습</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">87<span class="u">%</span></div>
+            <div class="l">목표 매칭 신뢰도</div>
+          </div>
+        </div>
+        <div class="lc-kto">
+          <div class="kto-tag">KTO</div>
+          <div class="kto-tx"><b>TourAPI 권역 POI</b>를 매칭 알고리즘에 실시간 입력</div>
+        </div>
+      </div>
+
+      <div class="device">
+        <div class="dyn-island"></div>
+      <div class="phone" data-screen-label="03 AI 권역관광 화면">
+        <div class="sb">
+          <span>9:41</span>
+          <div class="sb-r">
+            <svg width="17" height="11" viewBox="0 0 17 11" fill="#191919"><rect x="0" y="7" width="3" height="4" rx="0.5"></rect><rect x="4" y="5" width="3" height="6" rx="0.5"></rect><rect x="8" y="3" width="3" height="8" rx="0.5"></rect><rect x="12" y="0" width="3" height="11" rx="0.5"></rect></svg>
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="#191919"><path d="M7 1.5 C 4 1.5, 2 3, 0.5 4.5 L 1.5 5.5 C 2.7 4.3, 4.7 3, 7 3 S 11.3 4.3, 12.5 5.5 L 13.5 4.5 C 12 3, 10 1.5, 7 1.5 Z"></path><path d="M7 6.5 C 5.5 6.5, 4.5 7, 3.5 8 L 4.5 9 C 5.2 8.3, 6 8, 7 8 S 8.8 8.3, 9.5 9 L 10.5 8 C 9.5 7, 8.5 6.5, 7 6.5 Z"></path><circle cx="7" cy="10" r="1"></circle></svg>
+            <svg width="25" height="11" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#191919" fill="none"></rect><rect x="2" y="2" width="18" height="7" rx="1" fill="#191919"></rect><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.5" fill="#191919"></rect></svg>
+          </div>
+        </div>
+
+        <div class="ah">
+          <div class="ah-title">AI 추천<span class="dot">.</span></div>
+          <div class="ah-r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.35-4.35"></path><circle cx="11" cy="11" r="7"></circle></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+        </div>
+
+        <div class="p2-body">
+          <div class="p2-ctx">
+            <span class="chip">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+              청사포 갑오징어
+            </span>
+            <span class="chip">05:00→11:30</span>
+            <span class="chip">성인 2 · 초보 1</span>
+            <span class="chip">맑음 21°C</span>
+            <span class="chip live"><i></i>출조 연동</span>
+          </div>
+
+          <div class="p2-hero">
+            <div class="tag">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"></path></svg>
+              AI MATCH 87%
+            </div>
+            <div class="hk"><s>낚시 끝나고 뭐하지?</s>의 결말은 <b>이미 정해졌어요.</b></div>
+            <div class="pipe">
+              <span class="seg"><b>15.2만</b> 행동데이터</span>
+              <span class="arr">→</span>
+              <span class="seg"><b>132</b> POI 후보</span>
+              <span class="arr">→</span>
+              <span class="seg"><b>5</b>곳 선별</span>
+            </div>
+          </div>
+
+          <div class="p2-section-h">
+            <div class="l"><span class="tag">AUTO</span>오늘의 5단계 권역 코스</div>
+            <div class="r">총 4시간 30분</div>
+          </div>
+
+          <div class="p2-tl">
+            <div class="p2-tlstep start">
+              <div class="node">●</div>
+              <div class="p2-tlcard">
+                <div class="tm">12:00</div>
+                <div style="flex:1;min-width:0">
+                  <div class="nm">청사포항</div>
+                  <div class="meta"><span class="cat start">입항</span>코스 출발점</div>
+                </div>
+              </div>
+            </div>
+            <div class="p2-tlstep">
+              <div class="node">1</div>
+              <div class="p2-tlcard">
+                <div class="tm">12:30</div>
+                <div style="flex:1;min-width:0">
+                  <div class="nm">해운대 자갈치회센터</div>
+                  <div class="meta"><span class="cat food">식당</span>★4.7 · 자녀동반 94%</div>
+                </div>
+                <div class="kto">KTO</div>
+              </div>
+            </div>
+            <div class="p2-tlstep">
+              <div class="node">2</div>
+              <div class="p2-tlcard">
+                <div class="tm">14:00</div>
+                <div style="flex:1;min-width:0">
+                  <div class="nm">청사포 다릿돌전망대 카페</div>
+                  <div class="meta"><span class="cat cafe">카페</span>동해 일출뷰 · 아이 좌석</div>
+                </div>
+                <div class="kto">KTO</div>
+              </div>
+            </div>
+            <div class="p2-tlstep">
+              <div class="node">3</div>
+              <div class="p2-tlcard">
+                <div class="tm">15:00</div>
+                <div style="flex:1;min-width:0">
+                  <div class="nm">해운대 블루라인파크</div>
+                  <div class="meta"><span class="cat spot">관광</span>한국관광공사 인증</div>
+                </div>
+                <div class="kto">KTO</div>
+              </div>
+            </div>
+            <div class="p2-tlstep end">
+              <div class="node">★</div>
+              <div class="p2-tlcard">
+                <div class="tm">16:30</div>
+                <div style="flex:1;min-width:0">
+                  <div class="nm">해운대 스파랜드 센텀</div>
+                  <div class="meta"><span class="cat spa">온천</span>대형 찜질방 · 가족탕</div>
+                </div>
+                <div class="kto">KTO</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p2-kto-line">
+            <div class="lg">KTO</div>
+            <div class="tx">권역 POI 4곳 모두 <b>한국관광공사 TourAPI</b> 실시간 연동</div>
+            <div class="live"><i></i>LIVE</div>
+          </div>
+
+          <div class="p2-cta-wrap">
+            <button class="p2-cta">이 코스 함께 예약하기</button>
+            <div class="p2-cta-sub">5개 자원 통합 결제 · <b>4분</b>이면 끝</div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1z"></path></svg>홈</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>커뮤니티</div>
+          <div class="t on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>예약</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4M3 17l9 4 9-4"></path></svg>중고장터</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><path d="M3 6h18M16 10a4 4 0 01-8 0"></path></svg>쇼핑</div>
+        </div>
+      </div>
+      </div>
+      <div class="phone-cap">
+        <div class="cap-t">AI 권역 코스</div>
+        <div class="cap-d">청사포 입항 직후 5단계</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PHONE 3 — Fishing Stay
+         ============================================================ -->
+    <div class="phone-wrap">
+      <div class="lc f3">
+        <div class="lc-head">
+          <div class="lc-fid">F3</div>
+          <div class="lc-type">B2C · 회원 화면</div>
+        </div>
+        <div class="lc-h">
+          <div class="lc-title">Fishing Stay 표준</div>
+          <div class="lc-sub">50개 표준 통과 숙소만 — 권역 분산 30곳 · Basic / Plus 2등급</div>
+        </div>
+        <div class="lc-kpis">
+          <div class="lc-kpi">
+            <div class="v">50<span class="u">개</span></div>
+            <div class="l">현장 체크리스트</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">30<span class="u">곳</span></div>
+            <div class="l">권역 분산 등재</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">월1<span class="u">회</span></div>
+            <div class="l">의무 운영 점검</div>
+          </div>
+        </div>
+        <div class="lc-kto">
+          <div class="kto-tag">KTO</div>
+          <div class="kto-tx">권역 분산 기준은 <b>TourAPI 광역 권역 분류</b>에 정합</div>
+        </div>
+      </div>
+
+      <div class="device">
+        <div class="dyn-island"></div>
+      <div class="phone" data-screen-label="04 Fishing Stay 화면">
+        <div class="sb">
+          <span>9:41</span>
+          <div class="sb-r">
+            <svg width="17" height="11" viewBox="0 0 17 11" fill="#191919"><rect x="0" y="7" width="3" height="4" rx="0.5"></rect><rect x="4" y="5" width="3" height="6" rx="0.5"></rect><rect x="8" y="3" width="3" height="8" rx="0.5"></rect><rect x="12" y="0" width="3" height="11" rx="0.5"></rect></svg>
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="#191919"><path d="M7 1.5 C 4 1.5, 2 3, 0.5 4.5 L 1.5 5.5 C 2.7 4.3, 4.7 3, 7 3 S 11.3 4.3, 12.5 5.5 L 13.5 4.5 C 12 3, 10 1.5, 7 1.5 Z"></path><path d="M7 6.5 C 5.5 6.5, 4.5 7, 3.5 8 L 4.5 9 C 5.2 8.3, 6 8, 7 8 S 8.8 8.3, 9.5 9 L 10.5 8 C 9.5 7, 8.5 6.5, 7 6.5 Z"></path><circle cx="7" cy="10" r="1"></circle></svg>
+            <svg width="25" height="11" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#191919" fill="none"></rect><rect x="2" y="2" width="18" height="7" rx="1" fill="#191919"></rect><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.5" fill="#191919"></rect></svg>
+          </div>
+        </div>
+
+        <div class="ah">
+          <div class="ah-title">Fishing Stay<span class="dot">.</span></div>
+          <div class="ah-r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-4.35-4.35"></path><circle cx="11" cy="11" r="7"></circle></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+        </div>
+
+        <div class="p2-body">
+          <div class="p2-ctx">
+            <span class="chip">당신의 다음 출조</span>
+            <span class="chip">해운대·송정</span>
+            <span class="chip">6인 · 차량 1대</span>
+          </div>
+
+          <div class="p3-hero">
+            <div class="num">
+              <div class="b">50</div>
+              <div class="s">/50</div>
+            </div>
+            <div class="body">
+              <div class="t1">FISHING STAY · 표준 v1</div>
+              <div class="t2">새벽 4시 체크인.<br>50개 표준 통과 30곳.</div>
+              <div class="t3">해운대·송정 권역 매칭 7곳</div>
+            </div>
+          </div>
+
+          <div class="p3-tabs">
+            <div class="t on">전체<span class="n">30</span></div>
+            <div class="t">Basic<span class="n">18</span></div>
+            <div class="t on plus">Plus<span class="n">12</span></div>
+          </div>
+
+          <div class="p3-card">
+            <div class="img">
+              <svg class="scene" viewBox="0 0 393 140" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2B4768"></stop>
+                    <stop offset="100%" stop-color="#5589BA"></stop>
+                  </linearGradient>
+                </defs>
+                <rect width="393" height="140" fill="url(#sky1)"></rect>
+                <circle cx="60" cy="40" r="14" fill="rgba(255,255,255,0.18)"></circle>
+                <path d="M0 95 Q 80 80 160 92 T 320 90 T 393 92 L393 140 L0 140 Z" fill="rgba(0,0,0,0.18)"></path>
+                <path d="M0 110 Q 60 100 130 107 T 280 105 T 393 107 L393 140 L0 140 Z" fill="rgba(0,0,0,0.28)"></path>
+                <rect x="260" y="60" width="36" height="55" fill="rgba(0,0,0,0.42)" rx="2"></rect>
+                <rect x="270" y="68" width="4" height="6" fill="rgba(255,235,150,0.6)"></rect>
+                <rect x="280" y="68" width="4" height="6" fill="rgba(255,235,150,0.6)"></rect>
+                <rect x="270" y="80" width="4" height="6" fill="rgba(255,235,150,0.6)"></rect>
+                <rect x="280" y="80" width="4" height="6" fill="rgba(255,235,150,0.6)"></rect>
+                <rect x="297" y="78" width="4" height="22" fill="rgba(0,0,0,0.5)"></rect>
+              </svg>
+              <span class="grade">PLUS</span>
+              <span class="rank">권역 7곳 중 1번째</span>
+              <span class="stamp">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12L10 17L19 7"></path></svg>
+                현장검수 2026.03.14
+              </span>
+            </div>
+            <div class="body">
+              <div class="nm">청사포 베이 스테이</div>
+              <div class="loc"><span>부산 해운대구 청사포동</span><span class="dot"></span><span>부두 480m · 도보 4분</span></div>
+              <div class="score">
+                <div class="bar"><div class="fill" style="width:100%"></div></div>
+                <div class="pt">50<s>/50</s></div>
+              </div>
+              <div class="feats">
+                <span class="feat pur">04시 체크인</span>
+                <span class="feat pur">장비 세척실</span>
+                <span class="feat">8인 수용</span>
+                <span class="feat">대형 주차</span>
+              </div>
+              <div class="price">
+                <div>
+                  <div class="orig">₩220,000</div>
+                  <div class="now">₩180,000<span class="per">/박</span></div>
+                </div>
+                <div class="det">상세 보기
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6L15 12L9 18"></path></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p3-checks">
+            <div class="it">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              <div class="l">새벽<br>동선</div>
+              <div class="p">10pt</div>
+            </div>
+            <div class="it">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
+              <div class="l">장비<br>보관</div>
+              <div class="p">10pt</div>
+            </div>
+            <div class="it">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17v3h14v-3M8 13c0-3 2-5 4-5s4 2 4 5"></path></svg>
+              <div class="l">세척실</div>
+              <div class="p">10pt</div>
+            </div>
+            <div class="it">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5"></path></svg>
+              <div class="l">다인<br>수용</div>
+              <div class="p">10pt</div>
+            </div>
+            <div class="it">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L4 6v6c0 4 3 8 8 9 5-1 8-5 8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+              <div class="l">위생</div>
+              <div class="p">10pt</div>
+            </div>
+          </div>
+
+          <div class="p2-cta-wrap">
+            <button class="p2-cta">해운대·송정 권역 전체 보기</button>
+            <div class="p2-cta-sub">월 1회 운영 점검으로 매월 갱신</div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1z"></path></svg>홈</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>커뮤니티</div>
+          <div class="t on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>예약</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4M3 17l9 4 9-4"></path></svg>중고장터</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><path d="M3 6h18M16 10a4 4 0 01-8 0"></path></svg>쇼핑</div>
+        </div>
+      </div>
+      </div>
+      <div class="phone-cap">
+        <div class="cap-t">Fishing Stay</div>
+        <div class="cap-d">해운대·송정 권역 7곳</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PHONE 4 — 정산
+         ============================================================ -->
+    <div class="phone-wrap">
+      <div class="lc f4">
+        <div class="lc-head">
+          <div class="lc-fid">F4</div>
+          <div class="lc-type">B2B · 공급자 콘솔</div>
+        </div>
+        <div class="lc-h">
+          <div class="lc-title">수익공유 정산 엔진</div>
+          <div class="lc-sub">한 거래 복수 공급자에게 7일 안에 자동 분배 · 세무 0 터치</div>
+        </div>
+        <div class="lc-kpis">
+          <div class="lc-kpi">
+            <div class="v">7<span class="u">일</span></div>
+            <div class="l">정산 SLA</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">100<span class="u">%</span></div>
+            <div class="l">세금계산서 자동</div>
+          </div>
+          <div class="lc-kpi">
+            <div class="v">2026.01</div>
+            <div class="l">현금영수증 의무</div>
+          </div>
+        </div>
+        <div class="lc-kto">
+          <div class="kto-tag">KTO</div>
+          <div class="kto-tx">영세 공급자 디지털 도입 부담 <b>0</b> · 정부 정책 정합성</div>
+        </div>
+      </div>
+
+      <div class="device">
+        <div class="dyn-island"></div>
+      <div class="phone" data-screen-label="05 정산 엔진 화면">
+        <div class="sb">
+          <span>9:41</span>
+          <div class="sb-r">
+            <svg width="17" height="11" viewBox="0 0 17 11" fill="#191919"><rect x="0" y="7" width="3" height="4" rx="0.5"></rect><rect x="4" y="5" width="3" height="6" rx="0.5"></rect><rect x="8" y="3" width="3" height="8" rx="0.5"></rect><rect x="12" y="0" width="3" height="11" rx="0.5"></rect></svg>
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="#191919"><path d="M7 1.5 C 4 1.5, 2 3, 0.5 4.5 L 1.5 5.5 C 2.7 4.3, 4.7 3, 7 3 S 11.3 4.3, 12.5 5.5 L 13.5 4.5 C 12 3, 10 1.5, 7 1.5 Z"></path><path d="M7 6.5 C 5.5 6.5, 4.5 7, 3.5 8 L 4.5 9 C 5.2 8.3, 6 8, 7 8 S 8.8 8.3, 9.5 9 L 10.5 8 C 9.5 7, 8.5 6.5, 7 6.5 Z"></path><circle cx="7" cy="10" r="1"></circle></svg>
+            <svg width="25" height="11" viewBox="0 0 25 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#191919" fill="none"></rect><rect x="2" y="2" width="18" height="7" rx="1" fill="#191919"></rect><rect x="22.5" y="3.5" width="1.5" height="4" rx="0.5" fill="#191919"></rect></svg>
+          </div>
+        </div>
+
+        <div class="ah">
+          <div class="ah-title">정산<span class="dot">.</span></div>
+          <div class="ah-r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+        </div>
+
+        <div class="p4-body">
+          <div class="p4-ctx">
+            <span class="chip dark"><i></i>공급자</span>
+            <span class="chip">청사포 베이 스테이</span>
+            <span class="chip">정산주기 7일</span>
+          </div>
+
+          <div class="p4-hero">
+            <div class="top">
+              <div class="m">
+                <div class="ml">M</div>
+                <div class="mt">ABOUTFISHING MONEY</div>
+              </div>
+              <div class="dday"><i></i>D-3</div>
+            </div>
+            <div class="lb">이번 주 입금 예정</div>
+            <div class="amt"><span class="w">₩</span>2,847,300</div>
+            <div class="sub">2026.05.18 (월) 09:00 자동 입금 · 농협 351-****-23</div>
+            <div class="pills">
+              <div class="pill">
+                <div class="lbl"><i style="background:#1AAD4B"></i>정산 완료</div>
+                <div class="v">₩8,420,000</div>
+              </div>
+              <div class="pill">
+                <div class="lbl"><i style="background:#FFC700"></i>정산 대기</div>
+                <div class="v">₩6,400,000</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p4-kpi">
+            <div class="k">
+              <div class="l">진행 거래</div>
+              <div class="v">23<span class="u">건</span></div>
+              <div class="d up">+5 이번주</div>
+            </div>
+            <div class="k">
+              <div class="l">평균 리드타임</div>
+              <div class="v">D-2.4</div>
+              <div class="d tgt">목표 7일 이내</div>
+            </div>
+            <div class="k">
+              <div class="l">자동 발행률</div>
+              <div class="v">100<span class="u">%</span></div>
+              <div class="d gold">세무 0 터치</div>
+            </div>
+          </div>
+
+          <div class="p4-deal">
+            <div class="top">
+              <div class="pkg">PKG-2605-CSP · 종료 5/24</div>
+              <div class="dd warn">D-1</div>
+            </div>
+            <div class="nm">청사포 갑오징어 미식 1박2일</div>
+            <div class="meta">공급자 4 · 분배 예정 5/25</div>
+            <div class="amt">
+              <div class="l">거래 총액</div>
+              <div class="v">₩646,000</div>
+            </div>
+            <div class="stack">
+              <div style="flex:28; background:#0041FF;">28</div>
+              <div style="flex:35; background:#1AAD4B;">35</div>
+              <div style="flex:14; background:#FFC700; color:#191919;">14</div>
+              <div style="flex:16; background:#6433DF;">16</div>
+              <div style="flex:7; background:#AAAAAA;">7</div>
+            </div>
+            <div class="lg">
+              <div class="row">
+                <div class="l"><span class="sq" style="background:#0041FF"></span><span class="nm2">선박</span><span class="pct">28%</span></div>
+                <div class="am">₩180,500</div>
+              </div>
+              <div class="row">
+                <div class="l"><span class="sq" style="background:#1AAD4B"></span><span class="nm2">숙박</span><span class="pct">35%</span></div>
+                <div class="am">₩228,000</div>
+              </div>
+              <div class="row">
+                <div class="l"><span class="sq" style="background:#FFC700"></span><span class="nm2">식음</span><span class="pct">14%</span></div>
+                <div class="am">₩91,200</div>
+              </div>
+              <div class="row">
+                <div class="l"><span class="sq" style="background:#6433DF"></span><span class="nm2">렌탈</span><span class="pct">16%</span></div>
+                <div class="am">₩102,000</div>
+              </div>
+            </div>
+            <div class="st">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              세금계산서·현금영수증 자동 발행 예약 — 준비됨
+            </div>
+          </div>
+
+          <div class="p4-law">
+            <div class="ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7l9 5 9-5z"></path><path d="M3 12l9 5 9-5M3 17l9 5 9-5"></path></svg>
+            </div>
+            <div>
+              <span class="tg">2026.01 시행 · 법령 대응</span>
+              <div class="tx">현금영수증 의무발행 — <b>자동 처리 100%</b>. 영세 공급자 디지털 도입 부담 0.</div>
+            </div>
+          </div>
+
+          <div class="p4-cta-wrap">
+            <button class="p4-cta-sec">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              리포트 PDF
+            </button>
+            <button class="p4-cta-pri">
+              정산 자동화 신청
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-7h-6v7H4a1 1 0 01-1-1z"></path></svg>홈</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>커뮤니티</div>
+          <div class="t on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>예약</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4M3 17l9 4 9-4"></path></svg>중고장터</div>
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><path d="M3 6h18M16 10a4 4 0 01-8 0"></path></svg>쇼핑</div>
+        </div>
+      </div>
+      </div>
+      <div class="phone-cap">
+        <div class="cap-t">수익공유 정산</div>
+        <div class="cap-d">청사포 출조 정산 D-3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== SUMMARY FOOTER ====================== -->
+  <section class="summary">
+    <div class="l">
+      <h3>5개월 후, <b>본 앱 정식 출시 단계의 권역 패키지 운영 v1</b>이<br>회원 25.1만 명에게 별도 채널 없이 즉시 배포됩니다.</h3>
+      <p>본 사업 협약기간 5개월의 산출물은 단순 PoC가 아닌 <b style="color:#fff">운영 단계의 v1</b>. 회원의 한 줄 챗봇 입력만으로 공급자 SKU(F1) · AI 코스(F2) · Fishing Stay(F3) · 자동 정산(F4)이 동시에 작동하며, 협약 종료 즉시 회원 25.1만 명이 사용합니다.</p>
+    </div>
+    <div class="r">
+      <div class="it">
+        <div class="v">30<span class="u">개</span></div>
+        <div class="l">SKU 출시</div>
+      </div>
+      <div class="it">
+        <div class="v">30<span class="u">곳</span></div>
+        <div class="l">Fishing Stay</div>
+      </div>
+      <div class="it">
+        <div class="v">7<span class="u">일</span></div>
+        <div class="l">정산 SLA</div>
+      </div>
+      <div class="it">
+        <div class="v">25.1<span class="u">만</span></div>
+        <div class="l">즉시 노출</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+</body></html>
